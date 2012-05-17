@@ -19,8 +19,8 @@ import java.util.logging.Logger;
 
 /**
  * @author Sebastian Köhler <whoami@whoami.org.uk>
- * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
+//Cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class ConsoleLogger {
     private static final Logger log = Logger.getLogger("Minecraft");
 

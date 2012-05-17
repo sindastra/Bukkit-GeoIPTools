@@ -28,8 +28,8 @@ import org.bukkit.plugin.java.JavaPlugin;
  * This bukkit plugin provides an API for Maxmind GeoIP database lookups.
  *
  * @author Sebastian Köhler <whoami@whoami.org.uk>
- * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
+//Updating & cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class GeoIPTools extends JavaPlugin {
 
     private Settings settings;
@@ -61,8 +61,7 @@ public class GeoIPTools extends JavaPlugin {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label,
-            String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (label.equalsIgnoreCase("geoupdate")) {
             if (sender.hasPermission("GeoIPTools.geoupdate")) {
                 getServer().getScheduler().scheduleAsyncDelayedTask(this, new UpdateTask(this, sender), 0);

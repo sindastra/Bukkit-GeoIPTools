@@ -22,8 +22,8 @@ import org.bukkit.plugin.Plugin;
 
 /**
  * @author Sebastian Köhler <whoami@whoami.org.uk>
- * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
+//Updating & cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class Settings {
 
     final String CITYDATABASEPATH = "./plugins/GeoIPTools/GeoLiteCity.dat";

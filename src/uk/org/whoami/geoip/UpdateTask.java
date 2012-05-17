@@ -24,8 +24,8 @@ import uk.org.whoami.geoip.util.Updater;
 
 /**
  * @author Sebastian Köhler <whoami@whoami.org.uk>
- * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
+//Cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class UpdateTask implements Runnable {
     
     /* 

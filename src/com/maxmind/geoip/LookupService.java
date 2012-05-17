@@ -69,7 +69,7 @@ import javax.naming.directory.InitialDirContext;
  *
  * @author Matt Tucker (matt@jivesoftware.com)
  */
-//Updated to remove parameterization warnings by Fishrock123 <fishrock123@rocketmail.com>
+//Updated to remove parameterization warnings & added lookups for code -> country and country-> code - Fishrock123 <fishrock123@rocketmail.com>
 public class LookupService {
 
     /**
