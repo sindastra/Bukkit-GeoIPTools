@@ -16,19 +16,19 @@
 package uk.org.whoami.geoip;
 
 import uk.org.whoami.geoip.util.ConsoleLogger;
+import uk.org.whoami.geoip.util.MetricsLite;
 import uk.org.whoami.geoip.util.Settings;
-import uk.org.whoami.geoip.util.Updater;
 import java.io.IOException;
-import java.net.MalformedURLException;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitScheduler;
 
 /**
  * This bukkit plugin provides an API for Maxmind GeoIP database lookups.
  *
  * @author Sebastian Köhler <whoami@whoami.org.uk>
+ * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
 public class GeoIPTools extends JavaPlugin {
 
@@ -37,19 +37,19 @@ public class GeoIPTools extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        settings = new Settings(this.getConfiguration());
+        settings = new Settings(this);
         ConsoleLogger.info("Starting database updates");
-        try {
-            Updater.update(settings);
-        } catch (MalformedURLException ex) {
-            ConsoleLogger.info(ex.getMessage());
-        }
-
-        ConsoleLogger.info(this.getDescription().getName() + " " + this.getDescription().getVersion() + " loaded");
+        getServer().getScheduler().scheduleAsyncDelayedTask(this, new UpdateTask(this, Bukkit.getConsoleSender()), 0);
     }
 
     @Override
     public void onEnable() {
+    	try {
+		    new MetricsLite(this).start();
+		    
+		} catch (IOException e) {
+			ConsoleLogger.info(e.getMessage());
+		}
     }
 
     @Override
@@ -58,7 +58,6 @@ public class GeoIPTools extends JavaPlugin {
             geo.close();
             geo = null;
         }
-        ConsoleLogger.info(this.getDescription().getName() + " " + this.getDescription().getVersion() + " disabled");
     }
 
     @Override
@@ -66,8 +65,7 @@ public class GeoIPTools extends JavaPlugin {
             String[] args) {
         if (label.equalsIgnoreCase("geoupdate")) {
             if (sender.hasPermission("GeoIPTools.geoupdate")) {
-                BukkitScheduler sched = this.getServer().getScheduler();
-                sched.scheduleAsyncDelayedTask(this, new UpdateTask(this, sender), 0);
+                getServer().getScheduler().scheduleAsyncDelayedTask(this, new UpdateTask(this, sender), 0);
             }
             return true;
         }

@@ -69,6 +69,7 @@ import javax.naming.directory.InitialDirContext;
  *
  * @author Matt Tucker (matt@jivesoftware.com)
  */
+//Updated to remove parameterization warnings by Fishrock123 <fishrock123@rocketmail.com>
 public class LookupService {
 
     /**
@@ -126,8 +127,10 @@ public class LookupService {
 
     private final Country UNKNOWN_COUNTRY = new Country("--", "N/A");
 
-    private static final HashMap hashmapcountryCodetoindex = new HashMap(512);
-    private static final HashMap hashmapcountryNametoindex = new HashMap(512);
+    private static final HashMap<String, Integer> hashmapcountryCodetoindex = new HashMap<String, Integer>(512);
+    private static final HashMap<String, Integer> hashmapcountryNametoindex = new HashMap<String, Integer>(512);
+    private static final HashMap<String, String> hashmapcountryCodetoName = new HashMap<String, String>(512); // Fishrock123 - Add support for country name lookup from country code.
+    private static final HashMap<String, String> hashmapcountryNametoCode = new HashMap<String, String>(512); // Fishrock123 - Add support for country code lookup from country name.
     private static final String[] countryCode = {
 	"--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR",
 	"AS","AT","AU","AW","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ",
@@ -206,15 +209,38 @@ public class LookupService {
     /* init the hashmap once at startup time */
     static {
         int i;
-        if(countryCode.length!=countryName.length)
-            throw new AssertionError("countryCode.length!=countryName.length");
+        if (countryCode.length != countryName.length)
+            throw new AssertionError("countryCode.length != countryName.length");
               
         // distributed service only
-        for (i = 0; i < countryCode.length ;i++){
-            hashmapcountryCodetoindex.put(countryCode[i],Integer.valueOf(i));
-            hashmapcountryNametoindex.put(countryName[i],Integer.valueOf(i));
+        for (i = 0; i < countryCode.length ; i++) {
+            hashmapcountryCodetoindex.put(countryCode[i], Integer.valueOf(i));
+            hashmapcountryNametoindex.put(countryName[i], Integer.valueOf(i));
+            hashmapcountryCodetoName.put(countryCode[i], countryName[i]); // Fishrock123 - Add support for country name lookup from country code.
+            hashmapcountryNametoCode.put(countryName[i], countryCode[i]); // Fishrock123 - Add support for country code lookup from country name.
         }
     };
+    
+    // Fishrock123 start - Add support for country name lookup from country code.
+    public static boolean hasCountryName(String countryName) {
+    	return hashmapcountryNametoCode.containsKey(countryName);
+    }
+    
+    // Fishrock123 - Add support for country name lookup from country code.
+    public static String getCountryName(String countryCode) {
+    	return hashmapcountryCodetoName.get(countryCode);
+    }
+    
+    // Fishrock123 - Add support for country code lookup from country name.
+    public static boolean hasCountryCode(String countryCode) {
+    	return hashmapcountryCodetoName.containsKey(countryCode);
+    }
+    
+ 	// Fishrock123 - Add support for country code lookup from country name.
+    public static String getCountryCode(String countryName) {
+    	return hashmapcountryNametoCode.get(countryName);
+    }
+    // Fishrock123 end
 
 
     /**
@@ -613,7 +639,7 @@ public class LookupService {
 
     String getDnsAttributes(String ip) {
         try {
-            Hashtable env = new Hashtable();
+            Hashtable<String, String> env = new Hashtable<String, String>();
             env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
 	    // TODO don't specify ws1, instead use ns servers for s.maxmind.com
             env.put("java.naming.provider.url","dns://ws1.maxmind.com/");

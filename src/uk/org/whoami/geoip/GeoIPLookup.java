@@ -26,8 +26,8 @@ import java.net.Inet6Address;
 import java.net.InetAddress;
 
 /**
- *
  * @author Sebastian Köhler <sebkoehler@whoami.org.uk>
+ * @author Fishrock123 <Fishrock123@rocketmail.com>
  */
 public class GeoIPLookup {
 
@@ -63,16 +63,16 @@ public class GeoIPLookup {
      * @return The country
      */
     public synchronized Country getCountry(InetAddress inet) {
-        if(inet instanceof Inet4Address) {
-            if(geo != null) {
+        if (inet instanceof Inet4Address) {
+            if (geo != null) {
                 return geo.getCountry(inet);
             } else {
                 ConsoleLogger.info("Uninitialised LookupService");
                 return new Country("--", "N/A");
             }
         }
-        if(inet instanceof Inet6Address) {
-            if(geov6 != null) {
+        if (inet instanceof Inet6Address) {
+            if (geov6 != null) {
                 return geov6.getCountryV6(inet);
             } else {
                 ConsoleLogger.info("Uninitialised IPv6 LookupService");
@@ -92,8 +92,8 @@ public class GeoIPLookup {
      * @return Location or null if the city database was not initialised
      */
     public synchronized Location getLocation(InetAddress inet) {
-        if(inet instanceof Inet4Address) {
-            if(geo != null) {
+        if (inet instanceof Inet4Address) {
+            if (geo != null) {
                 return geo.getLocation(inet);
             } else {
                 ConsoleLogger.info("Uninitialised LookupService");
@@ -105,15 +105,15 @@ public class GeoIPLookup {
     }
 
     synchronized void initCountry() throws IOException {
-        if(type == -1) {
+        if (type == -1) {
             geo = new LookupService(settings.getCountryDatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
             type = COUNTRYDATABASE;
         }
     }
 
     synchronized void initCity() throws IOException {
-        if(type == COUNTRYDATABASE || type == -1) {
-            if(type != -1) {
+        if (type == COUNTRYDATABASE || type == -1) {
+            if (type != -1) {
                 geo.close();
             }
             geo = new LookupService(settings.getCityDatabasePath(),LookupService.GEOIP_MEMORY_CACHE);

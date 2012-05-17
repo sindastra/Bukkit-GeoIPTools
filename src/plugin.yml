@@ -1,10 +1,15 @@
 name: GeoIPTools
 main: uk.org.whoami.geoip.GeoIPTools
-version: 0.3
+version: 0.5.1 B:7
+authors:
+- whoami
+- Fishrock123
+dev-url: http://dev.bukkit.org/server-mods/geoiptools/
 commands:
     geoupdate:
         description: Update the GeoIPDatabase files
         usage: /geoupdate
+        permission: geoiptools
 permissions:
     geoiptools.*:
         description: Gives access to all GeoIPTools commands

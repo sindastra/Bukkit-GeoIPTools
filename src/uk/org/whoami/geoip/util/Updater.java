@@ -25,34 +25,42 @@ import java.net.URL;
 import java.util.Date;
 import java.util.zip.GZIPInputStream;
 
+/**
+ * @author Sebastian Köhler <whoami@whoami.org.uk>
+ * @author Fishrock123 <Fishrock123@rocketmail.com>
+ */
 public class Updater {
 
     public static void update(Settings settings) throws MalformedURLException {
-        if(settings.getCityDatabasePath().equals(settings.CITYDATABASEPATH)) {
+        if (settings.getCityDatabasePath().equals(settings.CITYDATABASEPATH)) {
             File file = new File(settings.CITYDATABASEPATH);
-            if(file.exists() && settings.isUpdaterDisabled()) return;
+            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
             URL url = new URL(settings.getCityDatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.CITYDATABASEPATH + " updated");
         }
 
-        if(settings.getCountryDatabasePath().equals(settings.COUNTRYDATABASEPATH)) {
+        if (settings.getCountryDatabasePath().equals(settings.COUNTRYDATABASEPATH)) {
             File file = new File(settings.COUNTRYDATABASEPATH);
-            if(file.exists() && settings.isUpdaterDisabled()) return;
+            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
             URL url = new URL(settings.getCountryDatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.COUNTRYDATABASEPATH + " updated");
         }
 
-        if(settings.getIPv6DatabasePath().equals(settings.IPV6DATABASEBATH)) {
+        if (settings.getIPv6DatabasePath().equals(settings.IPV6DATABASEBATH)) {
             File file = new File(settings.IPV6DATABASEBATH);
-            if(file.exists() && settings.isUpdaterDisabled()) return;
+            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
             URL url = new URL(settings.getIPv6DatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.IPV6DATABASEBATH + " updated");
         }
-        settings.setLastUpdated(new Date().getTime());
-        settings.write();
+        if (settings.isUpdaterDisabled()) {
+        	ConsoleLogger.info("Updater disabled.");
+        } else {
+        	settings.setLastUpdated(new Date().getTime());
+        	settings.write();
+        }
     }
 
     private static void updateFile(URL url, File file, long lastUpdated) {
@@ -68,16 +76,16 @@ public class Updater {
             con.setIfModifiedSince(lastUpdated);
             con.connect();
 
-            if(con.getResponseCode() == HttpURLConnection.HTTP_OK) {
+            if (con.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 byte[] buffer = new byte[4096];
                 out = new BufferedOutputStream(new FileOutputStream(file));
                 in = new GZIPInputStream(con.getInputStream());
                 int len;
-                while((len = in.read(buffer, 0, buffer.length)) > -1) {
+                while ((len = in.read(buffer, 0, buffer.length)) > -1) {
                     out.write(buffer, 0, len);
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             ConsoleLogger.info(e.getMessage());
         } finally {
             try {

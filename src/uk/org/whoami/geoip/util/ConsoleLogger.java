@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Sebastian Köhler <sebkoehler@whoami.org.uk>.
+ * Copyright 2011 Sebastian K�hler <sebkoehler@whoami.org.uk>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,10 @@ package uk.org.whoami.geoip.util;
 
 import java.util.logging.Logger;
 
+/**
+ * @author Sebastian Köhler <whoami@whoami.org.uk>
+ * @author Fishrock123 <Fishrock123@rocketmail.com>
+ */
 public class ConsoleLogger {
     private static final Logger log = Logger.getLogger("Minecraft");
 

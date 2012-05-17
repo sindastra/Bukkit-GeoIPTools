@@ -22,11 +22,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitScheduler;
 import uk.org.whoami.geoip.util.Updater;
 
+/**
+ * @author Sebastian Köhler <whoami@whoami.org.uk>
+ * @author Fishrock123 <Fishrock123@rocketmail.com>
+ */
 public class UpdateTask implements Runnable {
     
-    /* I can not describe how much the bukkit thread system sucks.
-     * In order to savely send messages to a user from a ASyncThread I have to
-     * schedule a SyncThread. They should all be shot. */
+    /* 
+     * I can not describe how much the bukkit thread system sucks.
+     * In order to safely send messages to a user from a ASyncThread I have to
+     * schedule a SyncThread. They should all be shot. 
+     * */
     private class SyncMessageTask implements Runnable {
         
         private String message;
@@ -39,7 +45,8 @@ public class UpdateTask implements Runnable {
         public void run() {
             try {
                 admin.sendMessage(message);
-            } catch(NullPointerException ex) {}
+            } catch (NullPointerException ex) {
+            }
         } 
     }
     
@@ -65,7 +72,7 @@ public class UpdateTask implements Runnable {
         sched.scheduleSyncDelayedTask(plugin, new SyncMessageTask("[GeoIPTools] Update finished"));
         
         GeoIPLookup geo = plugin.getGeoIPLookup();
-        if(geo == null) return;
+        if (geo == null) return;
         
         try {
             geo.reload();
