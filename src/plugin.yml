@@ -1,6 +1,6 @@
 name: GeoIPTools
 main: uk.org.whoami.geoip.GeoIPTools
-version: 0.5.1 B:7
+version: '${project.version}'
 authors:
 - whoami
 - Fishrock123
