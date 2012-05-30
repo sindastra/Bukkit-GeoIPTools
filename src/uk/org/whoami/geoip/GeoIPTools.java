@@ -75,7 +75,11 @@ public class GeoIPTools extends JavaPlugin {
         return settings;
     }
     
-    GeoIPLookup getGeoIPLookup() {
+    /**
+     * Get a GeoIPLookup.
+     * @return A GeoIPLookup class
+     */
+    public GeoIPLookup getGeoIPLookup() {
         return geo;
     }
 
