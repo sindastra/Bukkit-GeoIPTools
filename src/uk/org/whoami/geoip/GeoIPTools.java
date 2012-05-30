@@ -44,12 +44,12 @@ public class GeoIPTools extends JavaPlugin {
 
     @Override
     public void onEnable() {
-    	try {
-		    new MetricsLite(this).start();
-		    
-		} catch (IOException e) {
-			ConsoleLogger.info(e.getMessage());
-		}
+        try {
+            new MetricsLite(this).start();
+            this.geo = new GeoIPLookup(settings);
+        } catch (IOException e) {
+            ConsoleLogger.info(e.getMessage());
+        }
     }
 
     @Override
@@ -80,6 +80,7 @@ public class GeoIPTools extends JavaPlugin {
     }
 
     /**
+     * @deprecated
      * Get a GeoIPLookup. The returned object will at least have the
      * functionality specified by the bitmask.
      *
@@ -92,6 +93,7 @@ public class GeoIPTools extends JavaPlugin {
      * @return A GeoIPLookup or null if the bitmask is wrong or an error occurs
      */
     public GeoIPLookup getGeoIPLookup(int bitmask) {
+        /*
         try {
             if (geo == null) {
                 geo = new GeoIPLookup(settings);
@@ -117,6 +119,7 @@ public class GeoIPTools extends JavaPlugin {
             ConsoleLogger.info(e.getMessage());
             return null;
         }
+        */
         return geo;
     }
 }
