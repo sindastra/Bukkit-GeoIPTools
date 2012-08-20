@@ -31,26 +31,10 @@ import java.net.InetAddress;
 // Cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class GeoIPLookup {
 
-    /**
-     * Bitmask for country database
-     */
-    public final static int COUNTRYDATABASE = 100;
-
-    /**
-     * Bitmask for city database
-     */
-    public final static int CITYDATABASE = 200;
-
-    /**
-     * Bitmask for IPv6 database
-     */
-    public final static int IPV6DATABASE = 300;
-
     private LookupService geocities = null;
     private LookupService geocountries = null;
     private LookupService geov6 = null;
     private Settings settings;
-    //private int type;
 
     GeoIPLookup(Settings settings) throws IOException {
         this.settings = settings;
@@ -101,39 +85,10 @@ public class GeoIPLookup {
             } else {
                 ConsoleLogger.info("Uninitialised LookupService");
             }
-        } else if(inet instanceof Inet6Address) {
+        } else if (inet instanceof Inet6Address) {
             ConsoleLogger.info("IPv6 is not supported for getLocation");
         }
         return null;
-    }
-
-    /**
-     * @deprecated 
-     */
-    synchronized void initCountry() throws IOException {
-        /*
-        geocountries = new LookupService(settings.getCountryDatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
-        */
-    }
-
-    /**
-     * @deprecated 
-     */
-    synchronized void initCity() throws IOException {
-        /*
-        geocities = new LookupService(settings.getCityDatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
-        */
-    }
-
-    /**
-     * @deprecated 
-     */
-    synchronized void initIPv6() throws IOException {
-        /*
-        if (geov6 == null) {
-            geov6 = new LookupService(settings.getIPv6DatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
-        }
-        */
     }
 
     synchronized void reload() throws IOException {
@@ -160,7 +115,7 @@ public class GeoIPLookup {
             geov6.close();
             geov6 = null;
         }
-        if(geocountries != null) {
+        if (geocountries != null) {
             geocountries.close();
             geocountries = null;
         }

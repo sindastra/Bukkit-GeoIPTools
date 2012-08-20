@@ -31,7 +31,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 //Updating & cleanup by Fishrock123 <Fishrock123@rocketmail.com>
 public class GeoIPTools extends JavaPlugin {
-
+	
     private Settings settings;
     private GeoIPLookup geo = null;
 
@@ -80,50 +80,6 @@ public class GeoIPTools extends JavaPlugin {
      * @return A GeoIPLookup class
      */
     public GeoIPLookup getGeoIPLookup() {
-        return geo;
-    }
-
-    /**
-     * @deprecated
-     * Get a GeoIPLookup. The returned object will at least have the
-     * functionality specified by the bitmask.
-     *
-     * The bitmask can be combined with "|" for example:
-     * getGeoIPLookup(GeoIPLookup.COUNTRYDATABASE | GeoIPLookup.IPV6DATABASE);
-     *
-     * You can not combine GeoIPLookup.COUNTRYDATABASE|GeoIPLookup.CITYDATABASE
-     *
-     * @param bitmask Bitmask to specify the funtionality
-     * @return A GeoIPLookup or null if the bitmask is wrong or an error occurs
-     */
-    public GeoIPLookup getGeoIPLookup(int bitmask) {
-        /*
-        try {
-            if (geo == null) {
-                geo = new GeoIPLookup(settings);
-            }
-            if (bitmask == GeoIPLookup.COUNTRYDATABASE) {
-                geo.initCountry();
-            } else if (bitmask == GeoIPLookup.CITYDATABASE) {
-                geo.initCity();
-            } else if (bitmask == GeoIPLookup.IPV6DATABASE) {
-                geo.initIPv6();
-            } else if (bitmask == (GeoIPLookup.COUNTRYDATABASE | GeoIPLookup.IPV6DATABASE)) {
-                geo.initCountry();
-                geo.initIPv6();
-            } else if (bitmask == (GeoIPLookup.CITYDATABASE | GeoIPLookup.IPV6DATABASE)) {
-                geo.initCity();
-                geo.initIPv6();
-            } else {
-                ConsoleLogger.info("Unsupported bitmask");
-                return null;
-            }
-        } catch (IOException e) {
-            ConsoleLogger.info("Can't load database");
-            ConsoleLogger.info(e.getMessage());
-            return null;
-        }
-        */
         return geo;
     }
 }
