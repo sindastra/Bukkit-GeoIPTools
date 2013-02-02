@@ -39,7 +39,7 @@ public class GeoIPTools extends JavaPlugin {
     public void onLoad() {
         settings = new Settings(this);
         ConsoleLogger.info("Starting database updates");
-        getServer().getScheduler().scheduleAsyncDelayedTask(this, new UpdateTask(this, Bukkit.getConsoleSender()), 0);
+        getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
     }
 
     @Override
@@ -64,7 +64,7 @@ public class GeoIPTools extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (label.equalsIgnoreCase("geoupdate")) {
             if (sender.hasPermission("GeoIPTools.geoupdate")) {
-                getServer().getScheduler().scheduleAsyncDelayedTask(this, new UpdateTask(this, sender), 0);
+            getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
             }
             return true;
         }
