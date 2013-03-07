@@ -47,7 +47,7 @@ public class GeoIPTools extends JavaPlugin {
                 getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
             }
             
-            if (!getDescription().getVersion().contains("TEST")) {
+            if (!getDescription().getVersion().contains("SNAPSHOT")) {
                 new MetricsLite(this).start();
             }
         } catch (IOException e) {
