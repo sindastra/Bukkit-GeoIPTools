@@ -4,7 +4,7 @@
   <groupId>uk.org.whoami</groupId>
   <artifactId>GeoIPTools</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.1</version>
+  <version>1.0.2 TEST</version>
   <name>GeoIPTools</name>
   <url>http://github.com/Fishrock123/GeoIPTools</url>
   <properties>

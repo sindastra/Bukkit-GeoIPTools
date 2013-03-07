@@ -22,6 +22,7 @@ import java.io.IOException;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -36,17 +37,19 @@ public class GeoIPTools extends JavaPlugin {
     private GeoIPLookup geo = null;
 
     @Override
-    public void onLoad() {
-        settings = new Settings(this);
-        ConsoleLogger.info("Starting database updates");
-        getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
-    }
-
-    @Override
     public void onEnable() {
         try {
-            new MetricsLite(this).start();
+            settings = new Settings(this);
             this.geo = new GeoIPLookup(settings);
+            
+            if (settings.shouldUpdate()) {
+                ConsoleLogger.info("Starting GeoIP database updates.");
+                getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
+            }
+            
+            if (!getDescription().getVersion().contains("TEST")) {
+                new MetricsLite(this).start();
+            }
         } catch (IOException e) {
             ConsoleLogger.info(e.getMessage());
         }
@@ -64,7 +67,11 @@ public class GeoIPTools extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (label.equalsIgnoreCase("geoupdate")) {
             if (sender.hasPermission("GeoIPTools.geoupdate")) {
-            getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
+                if (sender instanceof Player) {
+                    sender.sendMessage("You have started a GeoIP database update.");
+                }
+                ConsoleLogger.info(sender.getName() + " started a GeoIP database update.");
+                getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
             }
             return true;
         }

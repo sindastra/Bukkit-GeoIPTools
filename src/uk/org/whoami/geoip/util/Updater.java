@@ -34,7 +34,7 @@ public class Updater {
     public static void update(Settings settings) throws MalformedURLException {
         if (settings.getCityDatabasePath().equals(settings.CITYDATABASEPATH)) {
             File file = new File(settings.CITYDATABASEPATH);
-            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
+            if (file.exists() && (settings.isUpdaterDisabled())) return;
             URL url = new URL(settings.getCityDatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.CITYDATABASEPATH + " updated");
@@ -42,7 +42,7 @@ public class Updater {
 
         if (settings.getCountryDatabasePath().equals(settings.COUNTRYDATABASEPATH)) {
             File file = new File(settings.COUNTRYDATABASEPATH);
-            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
+            if (file.exists() && (settings.isUpdaterDisabled())) return;
             URL url = new URL(settings.getCountryDatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.COUNTRYDATABASEPATH + " updated");
@@ -50,7 +50,7 @@ public class Updater {
 
         if (settings.getIPv6DatabasePath().equals(settings.IPV6DATABASEBATH)) {
             File file = new File(settings.IPV6DATABASEBATH);
-            if (file.exists() && (settings.isUpdaterDisabled() || !settings.shouldUpdate())) return;
+            if (file.exists() && (settings.isUpdaterDisabled())) return;
             URL url = new URL(settings.getIPv6DatabaseURL());
             updateFile(url, file, settings.getLastUpdated());
             ConsoleLogger.info(settings.IPV6DATABASEBATH + " updated");
@@ -90,17 +90,17 @@ public class Updater {
         } finally {
             try {
                 out.close();
-            } catch(IOException e) {
-            } catch(NullPointerException e) {
+            } catch (IOException e) {
+            } catch (NullPointerException e) {
             }
             try {
                 in.close();
-            } catch(IOException e) {
-            } catch(NullPointerException e) {
+            } catch (IOException e) {
+            } catch (NullPointerException e) {
             }
             try {
                 con.disconnect();
-            } catch(NullPointerException e) {
+            } catch (NullPointerException e) {
             }
         }
     }
