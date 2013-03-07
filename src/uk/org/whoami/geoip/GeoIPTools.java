@@ -71,7 +71,7 @@ public class GeoIPTools extends JavaPlugin {
                     sender.sendMessage("You have started a GeoIP database update.");
                 }
                 ConsoleLogger.info(sender.getName() + " started a GeoIP database update.");
-                getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
+                getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, sender));
             }
             return true;
         }
