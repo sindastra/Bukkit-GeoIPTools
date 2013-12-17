@@ -41,7 +41,6 @@ public class UpdateTask implements Runnable {
             this.message = message;
         }
         
-        @Override
         public void run() {
             try {
                 admin.sendMessage(message);
@@ -58,7 +57,6 @@ public class UpdateTask implements Runnable {
         this.admin = admin;
     }
         
-    @Override
     public void run() {
         BukkitScheduler sched = plugin.getServer().getScheduler();
         

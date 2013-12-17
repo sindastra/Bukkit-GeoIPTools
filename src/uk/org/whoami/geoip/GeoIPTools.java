@@ -38,20 +38,22 @@ public class GeoIPTools extends JavaPlugin {
 
     @Override
     public void onEnable() {
+    	boolean forceUpdate = false;
         try {
             settings = new Settings(this);
             this.geo = new GeoIPLookup(settings);
-            
-            if (settings.shouldUpdate()) {
-                ConsoleLogger.info("Starting GeoIP database updates.");
-                getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
-            }
-            
+
             if (!getDescription().getVersion().contains("SNAPSHOT")) {
                 new MetricsLite(this).start();
             }
         } catch (IOException e) {
-            ConsoleLogger.info(e.getMessage());
+        		forceUpdate = true;
+        		ConsoleLogger.info(e.getMessage());
+        } finally{
+          if (forceUpdate || settings.shouldUpdate()) {
+            ConsoleLogger.info("Starting GeoIP database updates.");
+            getServer().getScheduler().runTaskAsynchronously(this, new UpdateTask(this, Bukkit.getConsoleSender()));
+          }
         }
     }
 
