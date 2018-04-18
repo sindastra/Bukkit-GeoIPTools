@@ -1,4 +1,5 @@
-# GeoIPTools
+# Sindastra's GeoIPTools
+### Geo-IP library for Bukkit and Spigot.
 - Supports the GeoIPCountry, GeoIPCity and GeoIPv6 databases by MaxMind <http://www.maxmind.com>.
 - Databases are downloaded and updated automatically.
 - Auto update can be disabled or delayed (in days).
