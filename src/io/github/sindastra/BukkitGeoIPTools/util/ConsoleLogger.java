@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Sebastian Kšhler <sebkoehler@whoami.org.uk>.
+ * Copyright 2011 Sebastian Kï¿½hler <sebkoehler@whoami.org.uk>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.org.whoami.geoip.util;
+package io.github.sindastra.BukkitGeoIPTools.util;
 
 import java.util.logging.Logger;
 

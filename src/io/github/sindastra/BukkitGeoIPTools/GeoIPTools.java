@@ -14,16 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.org.whoami.geoip;
+package io.github.sindastra.BukkitGeoIPTools;
 
-import uk.org.whoami.geoip.util.ConsoleLogger;
-import uk.org.whoami.geoip.util.Settings;
 import java.io.IOException;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import io.github.sindastra.BukkitGeoIPTools.util.ConsoleLogger;
+import io.github.sindastra.BukkitGeoIPTools.util.Settings;
 
 /**
  * This bukkit plugin provides an API for Maxmind GeoIP database lookups.
