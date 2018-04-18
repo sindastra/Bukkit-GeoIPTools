@@ -1,5 +1,6 @@
 /*
- * Copyright 2011 Sebastian K�hler <sebkoehler@whoami.org.uk>.
+ * Copyright 2011 Sebastian Köhler <sebkoehler@whoami.org.uk>.
+ * Copyright 2018 Sindastra <https://github.com/sindastra/Bukkit-GeoIPTools>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
