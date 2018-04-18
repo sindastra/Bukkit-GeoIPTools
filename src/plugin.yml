@@ -1,10 +1,11 @@
 name: GeoIPTools
 main: uk.org.whoami.geoip.GeoIPTools
-version: '${project.version}'
+version: 'DEV'
 authors:
 - whoami
 - Fishrock123
-dev-url: http://dev.bukkit.org/server-mods/geoiptools/
+- Sindastra
+dev-url: https://github.com/sindastra/Bukkit-GeoIPTools
 commands:
     geoupdate:
         description: Update the GeoIPDatabase files
