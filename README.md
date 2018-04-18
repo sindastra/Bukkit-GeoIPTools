@@ -7,4 +7,4 @@
 - The user can specify from what URL the databases will be downloaded.
 - The user can specify a path to their own database files (download and auto-update feature will be disabled in this case).
 - Permissions support.
-- "Anonymous" statistic reporting to mcstats.org (Will be removed in the future due to privacy concerns).
+- No more tracking or statistics uploading!
