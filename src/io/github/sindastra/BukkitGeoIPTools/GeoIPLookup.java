@@ -38,7 +38,7 @@ public class GeoIPLookup {
     private LookupService geov6 = null;
     private Settings settings;
 
-    GeoIPLookup(Settings settings) throws IOException {
+    protected GeoIPLookup(Settings settings) throws IOException {
         this.settings = settings;
         this.geocountries = new LookupService(settings.getCountryDatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
         this.geov6 = new LookupService(settings.getIPv6DatabasePath(),LookupService.GEOIP_MEMORY_CACHE);
