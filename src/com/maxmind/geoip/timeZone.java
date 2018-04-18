@@ -1,1403 +1,1487 @@
 package com.maxmind.geoip;
 // generated automatically from admin/generate_timeZone.pl
 public class timeZone {
-  static public String timeZoneByCountryAndRegion(String country,String region) {
-    String timezone = null;
-    if (country == null) {
-      return null;
+    public static String timeZoneByCountryAndRegion(String country, String region) {
+        if (country == null) {
+            return null;
+        }
+        if (region == null) {
+            region = "";
+        }
+        String timezone = null;
+        if ("AD".equals(country)) {
+                timezone = "Europe/Andorra";
+        } else if ("AE".equals(country)) {
+                timezone = "Asia/Dubai";
+        } else if ("AF".equals(country)) {
+                timezone = "Asia/Kabul";
+        } else if ("AG".equals(country)) {
+                timezone = "America/Antigua";
+        } else if ("AI".equals(country)) {
+                timezone = "America/Anguilla";
+        } else if ("AL".equals(country)) {
+                timezone = "Europe/Tirane";
+        } else if ("AM".equals(country)) {
+                timezone = "Asia/Yerevan";
+        } else if ("AN".equals(country)) {
+                timezone = "America/Curacao";
+        } else if ("AO".equals(country)) {
+                timezone = "Africa/Luanda";
+        } else if ("AQ".equals(country)) {
+                timezone = "Antarctica/South_Pole";
+        } else if ("AR".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("02".equals(region)) {
+                  timezone = "America/Argentina/Catamarca";
+            } else if ("03".equals(region)) {
+                  timezone = "America/Argentina/Tucuman";
+            } else if ("04".equals(region)) {
+                  timezone = "America/Argentina/Rio_Gallegos";
+            } else if ("05".equals(region)) {
+                  timezone = "America/Argentina/Cordoba";
+            } else if ("06".equals(region)) {
+                  timezone = "America/Argentina/Tucuman";
+            } else if ("07".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("08".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("09".equals(region)) {
+                  timezone = "America/Argentina/Tucuman";
+            } else if ("10".equals(region)) {
+                  timezone = "America/Argentina/Jujuy";
+            } else if ("11".equals(region)) {
+                  timezone = "America/Argentina/San_Luis";
+            } else if ("12".equals(region)) {
+                  timezone = "America/Argentina/La_Rioja";
+            } else if ("13".equals(region)) {
+                  timezone = "America/Argentina/Mendoza";
+            } else if ("14".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("15".equals(region)) {
+                  timezone = "America/Argentina/San_Luis";
+            } else if ("16".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("17".equals(region)) {
+                  timezone = "America/Argentina/Salta";
+            } else if ("18".equals(region)) {
+                  timezone = "America/Argentina/San_Juan";
+            } else if ("19".equals(region)) {
+                  timezone = "America/Argentina/San_Luis";
+            } else if ("20".equals(region)) {
+                  timezone = "America/Argentina/Rio_Gallegos";
+            } else if ("21".equals(region)) {
+                  timezone = "America/Argentina/Buenos_Aires";
+            } else if ("22".equals(region)) {
+                  timezone = "America/Argentina/Catamarca";
+            } else if ("23".equals(region)) {
+                  timezone = "America/Argentina/Ushuaia";
+            } else if ("24".equals(region)) {
+                  timezone = "America/Argentina/Tucuman";
+            }
+        } else if ("AS".equals(country)) {
+                timezone = "Pacific/Pago_Pago";
+        } else if ("AT".equals(country)) {
+                timezone = "Europe/Vienna";
+        } else if ("AU".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Australia/Sydney";
+            } else if ("02".equals(region)) {
+                  timezone = "Australia/Sydney";
+            } else if ("03".equals(region)) {
+                  timezone = "Australia/Darwin";
+            } else if ("04".equals(region)) {
+                  timezone = "Australia/Brisbane";
+            } else if ("05".equals(region)) {
+                  timezone = "Australia/Adelaide";
+            } else if ("06".equals(region)) {
+                  timezone = "Australia/Hobart";
+            } else if ("07".equals(region)) {
+                  timezone = "Australia/Melbourne";
+            } else if ("08".equals(region)) {
+                  timezone = "Australia/Perth";
+            }
+        } else if ("AW".equals(country)) {
+                timezone = "America/Aruba";
+        } else if ("AX".equals(country)) {
+                timezone = "Europe/Mariehamn";
+        } else if ("AZ".equals(country)) {
+                timezone = "Asia/Baku";
+        } else if ("BA".equals(country)) {
+                timezone = "Europe/Sarajevo";
+        } else if ("BB".equals(country)) {
+                timezone = "America/Barbados";
+        } else if ("BD".equals(country)) {
+                timezone = "Asia/Dhaka";
+        } else if ("BE".equals(country)) {
+                timezone = "Europe/Brussels";
+        } else if ("BF".equals(country)) {
+                timezone = "Africa/Ouagadougou";
+        } else if ("BG".equals(country)) {
+                timezone = "Europe/Sofia";
+        } else if ("BH".equals(country)) {
+                timezone = "Asia/Bahrain";
+        } else if ("BI".equals(country)) {
+                timezone = "Africa/Bujumbura";
+        } else if ("BJ".equals(country)) {
+                timezone = "Africa/Porto-Novo";
+        } else if ("BL".equals(country)) {
+                timezone = "America/St_Barthelemy";
+        } else if ("BM".equals(country)) {
+                timezone = "Atlantic/Bermuda";
+        } else if ("BN".equals(country)) {
+                timezone = "Asia/Brunei";
+        } else if ("BO".equals(country)) {
+                timezone = "America/La_Paz";
+        } else if ("BQ".equals(country)) {
+                timezone = "America/Curacao";
+        } else if ("BR".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "America/Rio_Branco";
+            } else if ("02".equals(region)) {
+                  timezone = "America/Maceio";
+            } else if ("03".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("04".equals(region)) {
+                  timezone = "America/Manaus";
+            } else if ("05".equals(region)) {
+                  timezone = "America/Bahia";
+            } else if ("06".equals(region)) {
+                  timezone = "America/Fortaleza";
+            } else if ("07".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("08".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("11".equals(region)) {
+                  timezone = "America/Campo_Grande";
+            } else if ("13".equals(region)) {
+                  timezone = "America/Belem";
+            } else if ("14".equals(region)) {
+                  timezone = "America/Cuiaba";
+            } else if ("15".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("16".equals(region)) {
+                  timezone = "America/Belem";
+            } else if ("17".equals(region)) {
+                  timezone = "America/Recife";
+            } else if ("18".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("20".equals(region)) {
+                  timezone = "America/Fortaleza";
+            } else if ("21".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("22".equals(region)) {
+                  timezone = "America/Recife";
+            } else if ("23".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("24".equals(region)) {
+                  timezone = "America/Porto_Velho";
+            } else if ("25".equals(region)) {
+                  timezone = "America/Boa_Vista";
+            } else if ("26".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("27".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("28".equals(region)) {
+                  timezone = "America/Maceio";
+            } else if ("29".equals(region)) {
+                  timezone = "America/Sao_Paulo";
+            } else if ("30".equals(region)) {
+                  timezone = "America/Recife";
+            } else if ("31".equals(region)) {
+                  timezone = "America/Araguaina";
+            }
+        } else if ("BS".equals(country)) {
+                timezone = "America/Nassau";
+        } else if ("BT".equals(country)) {
+                timezone = "Asia/Thimphu";
+        } else if ("BV".equals(country)) {
+                timezone = "Antarctica/Syowa";
+        } else if ("BW".equals(country)) {
+                timezone = "Africa/Gaborone";
+        } else if ("BY".equals(country)) {
+                timezone = "Europe/Minsk";
+        } else if ("BZ".equals(country)) {
+                timezone = "America/Belize";
+        } else if ("CA".equals(country)) {
+            if ("AB".equals(region)) {
+                  timezone = "America/Edmonton";
+            } else if ("BC".equals(region)) {
+                  timezone = "America/Vancouver";
+            } else if ("MB".equals(region)) {
+                  timezone = "America/Winnipeg";
+            } else if ("NB".equals(region)) {
+                  timezone = "America/Halifax";
+            } else if ("NL".equals(region)) {
+                  timezone = "America/St_Johns";
+            } else if ("NS".equals(region)) {
+                  timezone = "America/Halifax";
+            } else if ("NT".equals(region)) {
+                  timezone = "America/Yellowknife";
+            } else if ("NU".equals(region)) {
+                  timezone = "America/Rankin_Inlet";
+            } else if ("ON".equals(region)) {
+                  timezone = "America/Toronto";
+            } else if ("PE".equals(region)) {
+                  timezone = "America/Halifax";
+            } else if ("QC".equals(region)) {
+                  timezone = "America/Montreal";
+            } else if ("SK".equals(region)) {
+                  timezone = "America/Regina";
+            } else if ("YT".equals(region)) {
+                  timezone = "America/Whitehorse";
+            }
+        } else if ("CC".equals(country)) {
+                timezone = "Indian/Cocos";
+        } else if ("CD".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Africa/Kinshasa";
+            } else if ("02".equals(region)) {
+                  timezone = "Africa/Kinshasa";
+            } else if ("03".equals(region)) {
+                  timezone = "Africa/Kinshasa";
+            } else if ("04".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("05".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("06".equals(region)) {
+                  timezone = "Africa/Kinshasa";
+            } else if ("07".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("08".equals(region)) {
+                  timezone = "Africa/Kinshasa";
+            } else if ("09".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("10".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("11".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            } else if ("12".equals(region)) {
+                  timezone = "Africa/Lubumbashi";
+            }
+        } else if ("CF".equals(country)) {
+                timezone = "Africa/Bangui";
+        } else if ("CG".equals(country)) {
+                timezone = "Africa/Brazzaville";
+        } else if ("CH".equals(country)) {
+                timezone = "Europe/Zurich";
+        } else if ("CI".equals(country)) {
+                timezone = "Africa/Abidjan";
+        } else if ("CK".equals(country)) {
+                timezone = "Pacific/Rarotonga";
+        } else if ("CL".equals(country)) {
+                timezone = "America/Santiago";
+        } else if ("CM".equals(country)) {
+                timezone = "Africa/Lagos";
+        } else if ("CN".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("04".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Harbin";
+            } else if ("06".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("07".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("08".equals(region)) {
+                  timezone = "Asia/Harbin";
+            } else if ("09".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("10".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("12".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Urumqi";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("15".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("16".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("18".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("19".equals(region)) {
+                  timezone = "Asia/Harbin";
+            } else if ("20".equals(region)) {
+                  timezone = "Asia/Harbin";
+            } else if ("21".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("22".equals(region)) {
+                  timezone = "Asia/Harbin";
+            } else if ("23".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("24".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("25".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("26".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("28".equals(region)) {
+                  timezone = "Asia/Shanghai";
+            } else if ("29".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("30".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("31".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("32".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            } else if ("33".equals(region)) {
+                  timezone = "Asia/Chongqing";
+            }
+        } else if ("CO".equals(country)) {
+                timezone = "America/Bogota";
+        } else if ("CR".equals(country)) {
+                timezone = "America/Costa_Rica";
+        } else if ("CU".equals(country)) {
+                timezone = "America/Havana";
+        } else if ("CV".equals(country)) {
+                timezone = "Atlantic/Cape_Verde";
+        } else if ("CW".equals(country)) {
+                timezone = "America/Curacao";
+        } else if ("CX".equals(country)) {
+                timezone = "Indian/Christmas";
+        } else if ("CY".equals(country)) {
+                timezone = "Asia/Nicosia";
+        } else if ("CZ".equals(country)) {
+                timezone = "Europe/Prague";
+        } else if ("DE".equals(country)) {
+                timezone = "Europe/Berlin";
+        } else if ("DJ".equals(country)) {
+                timezone = "Africa/Djibouti";
+        } else if ("DK".equals(country)) {
+                timezone = "Europe/Copenhagen";
+        } else if ("DM".equals(country)) {
+                timezone = "America/Dominica";
+        } else if ("DO".equals(country)) {
+                timezone = "America/Santo_Domingo";
+        } else if ("DZ".equals(country)) {
+                timezone = "Africa/Algiers";
+        } else if ("EC".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Pacific/Galapagos";
+            } else if ("02".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("03".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("04".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("05".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("06".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("07".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("08".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("09".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("10".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("11".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("12".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("13".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("14".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("15".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("17".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("18".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("19".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("20".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("22".equals(region)) {
+                  timezone = "America/Guayaquil";
+            } else if ("24".equals(region)) {
+                  timezone = "America/Guayaquil";
+            }
+        } else if ("EE".equals(country)) {
+                timezone = "Europe/Tallinn";
+        } else if ("EG".equals(country)) {
+                timezone = "Africa/Cairo";
+        } else if ("EH".equals(country)) {
+                timezone = "Africa/El_Aaiun";
+        } else if ("ER".equals(country)) {
+                timezone = "Africa/Asmara";
+        } else if ("ES".equals(country)) {
+            if ("07".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("27".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("29".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("31".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("32".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("34".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("39".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("51".equals(region)) {
+                  timezone = "Africa/Ceuta";
+            } else if ("52".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("53".equals(region)) {
+                  timezone = "Atlantic/Canary";
+            } else if ("54".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("55".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("56".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("57".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("58".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("59".equals(region)) {
+                  timezone = "Europe/Madrid";
+            } else if ("60".equals(region)) {
+                  timezone = "Europe/Madrid";
+            }
+        } else if ("ET".equals(country)) {
+                timezone = "Africa/Addis_Ababa";
+        } else if ("FI".equals(country)) {
+                timezone = "Europe/Helsinki";
+        } else if ("FJ".equals(country)) {
+                timezone = "Pacific/Fiji";
+        } else if ("FK".equals(country)) {
+                timezone = "Atlantic/Stanley";
+        } else if ("FM".equals(country)) {
+                timezone = "Pacific/Pohnpei";
+        } else if ("FO".equals(country)) {
+                timezone = "Atlantic/Faroe";
+        } else if ("FR".equals(country)) {
+                timezone = "Europe/Paris";
+        } else if ("FX".equals(country)) {
+                timezone = "Europe/Paris";
+        } else if ("GA".equals(country)) {
+                timezone = "Africa/Libreville";
+        } else if ("GB".equals(country)) {
+                timezone = "Europe/London";
+        } else if ("GD".equals(country)) {
+                timezone = "America/Grenada";
+        } else if ("GE".equals(country)) {
+                timezone = "Asia/Tbilisi";
+        } else if ("GF".equals(country)) {
+                timezone = "America/Cayenne";
+        } else if ("GG".equals(country)) {
+                timezone = "Europe/Guernsey";
+        } else if ("GH".equals(country)) {
+                timezone = "Africa/Accra";
+        } else if ("GI".equals(country)) {
+                timezone = "Europe/Gibraltar";
+        } else if ("GL".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "America/Thule";
+            } else if ("02".equals(region)) {
+                  timezone = "America/Godthab";
+            } else if ("03".equals(region)) {
+                  timezone = "America/Godthab";
+            }
+        } else if ("GM".equals(country)) {
+                timezone = "Africa/Banjul";
+        } else if ("GN".equals(country)) {
+                timezone = "Africa/Conakry";
+        } else if ("GP".equals(country)) {
+                timezone = "America/Guadeloupe";
+        } else if ("GQ".equals(country)) {
+                timezone = "Africa/Malabo";
+        } else if ("GR".equals(country)) {
+                timezone = "Europe/Athens";
+        } else if ("GS".equals(country)) {
+                timezone = "Atlantic/South_Georgia";
+        } else if ("GT".equals(country)) {
+                timezone = "America/Guatemala";
+        } else if ("GU".equals(country)) {
+                timezone = "Pacific/Guam";
+        } else if ("GW".equals(country)) {
+                timezone = "Africa/Bissau";
+        } else if ("GY".equals(country)) {
+                timezone = "America/Guyana";
+        } else if ("HK".equals(country)) {
+                timezone = "Asia/Hong_Kong";
+        } else if ("HN".equals(country)) {
+                timezone = "America/Tegucigalpa";
+        } else if ("HR".equals(country)) {
+                timezone = "Europe/Zagreb";
+        } else if ("HT".equals(country)) {
+                timezone = "America/Port-au-Prince";
+        } else if ("HU".equals(country)) {
+                timezone = "Europe/Budapest";
+        } else if ("ID".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("04".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("06".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("07".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("08".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("09".equals(region)) {
+                  timezone = "Asia/Jayapura";
+            } else if ("10".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("12".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("15".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("16".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("17".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("18".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("19".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("20".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("21".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("22".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("23".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("24".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("25".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("26".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("28".equals(region)) {
+                  timezone = "Asia/Jayapura";
+            } else if ("29".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("30".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("31".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("32".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("33".equals(region)) {
+                  timezone = "Asia/Jakarta";
+            } else if ("34".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("35".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("36".equals(region)) {
+                  timezone = "Asia/Jayapura";
+            } else if ("37".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("38".equals(region)) {
+                  timezone = "Asia/Makassar";
+            } else if ("39".equals(region)) {
+                  timezone = "Asia/Jayapura";
+            } else if ("40".equals(region)) {
+                  timezone = "Asia/Pontianak";
+            } else if ("41".equals(region)) {
+                  timezone = "Asia/Makassar";
+            }
+        } else if ("IE".equals(country)) {
+                timezone = "Europe/Dublin";
+        } else if ("IL".equals(country)) {
+                timezone = "Asia/Jerusalem";
+        } else if ("IM".equals(country)) {
+                timezone = "Europe/Isle_of_Man";
+        } else if ("IN".equals(country)) {
+                timezone = "Asia/Kolkata";
+        } else if ("IO".equals(country)) {
+                timezone = "Indian/Chagos";
+        } else if ("IQ".equals(country)) {
+                timezone = "Asia/Baghdad";
+        } else if ("IR".equals(country)) {
+                timezone = "Asia/Tehran";
+        } else if ("IS".equals(country)) {
+                timezone = "Atlantic/Reykjavik";
+        } else if ("IT".equals(country)) {
+                timezone = "Europe/Rome";
+        } else if ("JE".equals(country)) {
+                timezone = "Europe/Jersey";
+        } else if ("JM".equals(country)) {
+                timezone = "America/Jamaica";
+        } else if ("JO".equals(country)) {
+                timezone = "Asia/Amman";
+        } else if ("JP".equals(country)) {
+                timezone = "Asia/Tokyo";
+        } else if ("KE".equals(country)) {
+                timezone = "Africa/Nairobi";
+        } else if ("KG".equals(country)) {
+                timezone = "Asia/Bishkek";
+        } else if ("KH".equals(country)) {
+                timezone = "Asia/Phnom_Penh";
+        } else if ("KI".equals(country)) {
+                timezone = "Pacific/Tarawa";
+        } else if ("KM".equals(country)) {
+                timezone = "Indian/Comoro";
+        } else if ("KN".equals(country)) {
+                timezone = "America/St_Kitts";
+        } else if ("KP".equals(country)) {
+                timezone = "Asia/Pyongyang";
+        } else if ("KR".equals(country)) {
+                timezone = "Asia/Seoul";
+        } else if ("KW".equals(country)) {
+                timezone = "Asia/Kuwait";
+        } else if ("KY".equals(country)) {
+                timezone = "America/Cayman";
+        } else if ("KZ".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Asia/Almaty";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Almaty";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("04".equals(region)) {
+                  timezone = "Asia/Aqtobe";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("06".equals(region)) {
+                  timezone = "Asia/Aqtau";
+            } else if ("07".equals(region)) {
+                  timezone = "Asia/Oral";
+            } else if ("08".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("09".equals(region)) {
+                  timezone = "Asia/Aqtau";
+            } else if ("10".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Almaty";
+            } else if ("12".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Aqtobe";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Qyzylorda";
+            } else if ("15".equals(region)) {
+                  timezone = "Asia/Almaty";
+            } else if ("16".equals(region)) {
+                  timezone = "Asia/Aqtobe";
+            } else if ("17".equals(region)) {
+                  timezone = "Asia/Almaty";
+            }
+        } else if ("LA".equals(country)) {
+                timezone = "Asia/Vientiane";
+        } else if ("LB".equals(country)) {
+                timezone = "Asia/Beirut";
+        } else if ("LC".equals(country)) {
+                timezone = "America/St_Lucia";
+        } else if ("LI".equals(country)) {
+                timezone = "Europe/Vaduz";
+        } else if ("LK".equals(country)) {
+                timezone = "Asia/Colombo";
+        } else if ("LR".equals(country)) {
+                timezone = "Africa/Monrovia";
+        } else if ("LS".equals(country)) {
+                timezone = "Africa/Maseru";
+        } else if ("LT".equals(country)) {
+                timezone = "Europe/Vilnius";
+        } else if ("LU".equals(country)) {
+                timezone = "Europe/Luxembourg";
+        } else if ("LV".equals(country)) {
+                timezone = "Europe/Riga";
+        } else if ("LY".equals(country)) {
+                timezone = "Africa/Tripoli";
+        } else if ("MA".equals(country)) {
+                timezone = "Africa/Casablanca";
+        } else if ("MC".equals(country)) {
+                timezone = "Europe/Monaco";
+        } else if ("MD".equals(country)) {
+                timezone = "Europe/Chisinau";
+        } else if ("ME".equals(country)) {
+                timezone = "Europe/Podgorica";
+        } else if ("MF".equals(country)) {
+                timezone = "America/Marigot";
+        } else if ("MG".equals(country)) {
+                timezone = "Indian/Antananarivo";
+        } else if ("MH".equals(country)) {
+                timezone = "Pacific/Kwajalein";
+        } else if ("MK".equals(country)) {
+                timezone = "Europe/Skopje";
+        } else if ("ML".equals(country)) {
+                timezone = "Africa/Bamako";
+        } else if ("MM".equals(country)) {
+                timezone = "Asia/Rangoon";
+        } else if ("MN".equals(country)) {
+            if ("06".equals(region)) {
+                  timezone = "Asia/Choibalsan";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Ulaanbaatar";
+            } else if ("17".equals(region)) {
+                  timezone = "Asia/Choibalsan";
+            } else if ("19".equals(region)) {
+                  timezone = "Asia/Hovd";
+            } else if ("20".equals(region)) {
+                  timezone = "Asia/Ulaanbaatar";
+            } else if ("21".equals(region)) {
+                  timezone = "Asia/Ulaanbaatar";
+            } else if ("25".equals(region)) {
+                  timezone = "Asia/Ulaanbaatar";
+            }
+        } else if ("MO".equals(country)) {
+                timezone = "Asia/Macau";
+        } else if ("MP".equals(country)) {
+                timezone = "Pacific/Saipan";
+        } else if ("MQ".equals(country)) {
+                timezone = "America/Martinique";
+        } else if ("MR".equals(country)) {
+                timezone = "Africa/Nouakchott";
+        } else if ("MS".equals(country)) {
+                timezone = "America/Montserrat";
+        } else if ("MT".equals(country)) {
+                timezone = "Europe/Malta";
+        } else if ("MU".equals(country)) {
+                timezone = "Indian/Mauritius";
+        } else if ("MV".equals(country)) {
+                timezone = "Indian/Maldives";
+        } else if ("MW".equals(country)) {
+                timezone = "Africa/Blantyre";
+        } else if ("MX".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("02".equals(region)) {
+                  timezone = "America/Tijuana";
+            } else if ("03".equals(region)) {
+                  timezone = "America/Hermosillo";
+            } else if ("04".equals(region)) {
+                  timezone = "America/Merida";
+            } else if ("05".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("06".equals(region)) {
+                  timezone = "America/Chihuahua";
+            } else if ("07".equals(region)) {
+                  timezone = "America/Monterrey";
+            } else if ("08".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("09".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("10".equals(region)) {
+                  timezone = "America/Mazatlan";
+            } else if ("11".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("12".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("13".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("14".equals(region)) {
+                  timezone = "America/Mazatlan";
+            } else if ("15".equals(region)) {
+                  timezone = "America/Chihuahua";
+            } else if ("16".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("17".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("18".equals(region)) {
+                  timezone = "America/Mazatlan";
+            } else if ("19".equals(region)) {
+                  timezone = "America/Monterrey";
+            } else if ("20".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("21".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("22".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("23".equals(region)) {
+                  timezone = "America/Cancun";
+            } else if ("24".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("25".equals(region)) {
+                  timezone = "America/Mazatlan";
+            } else if ("26".equals(region)) {
+                  timezone = "America/Hermosillo";
+            } else if ("27".equals(region)) {
+                  timezone = "America/Merida";
+            } else if ("28".equals(region)) {
+                  timezone = "America/Monterrey";
+            } else if ("29".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("30".equals(region)) {
+                  timezone = "America/Mexico_City";
+            } else if ("31".equals(region)) {
+                  timezone = "America/Merida";
+            } else if ("32".equals(region)) {
+                  timezone = "America/Monterrey";
+            }
+        } else if ("MY".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("04".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("06".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("07".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("08".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("09".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Kuching";
+            } else if ("12".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Kuala_Lumpur";
+            } else if ("15".equals(region)) {
+                  timezone = "Asia/Kuching";
+            } else if ("16".equals(region)) {
+                  timezone = "Asia/Kuching";
+            }
+        } else if ("MZ".equals(country)) {
+                timezone = "Africa/Maputo";
+        } else if ("NA".equals(country)) {
+                timezone = "Africa/Windhoek";
+        } else if ("NC".equals(country)) {
+                timezone = "Pacific/Noumea";
+        } else if ("NE".equals(country)) {
+                timezone = "Africa/Niamey";
+        } else if ("NF".equals(country)) {
+                timezone = "Pacific/Norfolk";
+        } else if ("NG".equals(country)) {
+                timezone = "Africa/Lagos";
+        } else if ("NI".equals(country)) {
+                timezone = "America/Managua";
+        } else if ("NL".equals(country)) {
+                timezone = "Europe/Amsterdam";
+        } else if ("NO".equals(country)) {
+                timezone = "Europe/Oslo";
+        } else if ("NP".equals(country)) {
+                timezone = "Asia/Kathmandu";
+        } else if ("NR".equals(country)) {
+                timezone = "Pacific/Nauru";
+        } else if ("NU".equals(country)) {
+                timezone = "Pacific/Niue";
+        } else if ("NZ".equals(country)) {
+            if ("85".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("E7".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("E8".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("E9".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F1".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F2".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F3".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F4".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F5".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F6".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F7".equals(region)) {
+                  timezone = "Pacific/Chatham";
+            } else if ("F8".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("F9".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("G1".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("G2".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            } else if ("G3".equals(region)) {
+                  timezone = "Pacific/Auckland";
+            }
+        } else if ("OM".equals(country)) {
+                timezone = "Asia/Muscat";
+        } else if ("PA".equals(country)) {
+                timezone = "America/Panama";
+        } else if ("PE".equals(country)) {
+                timezone = "America/Lima";
+        } else if ("PF".equals(country)) {
+                timezone = "Pacific/Marquesas";
+        } else if ("PG".equals(country)) {
+                timezone = "Pacific/Port_Moresby";
+        } else if ("PH".equals(country)) {
+                timezone = "Asia/Manila";
+        } else if ("PK".equals(country)) {
+                timezone = "Asia/Karachi";
+        } else if ("PL".equals(country)) {
+                timezone = "Europe/Warsaw";
+        } else if ("PM".equals(country)) {
+                timezone = "America/Miquelon";
+        } else if ("PN".equals(country)) {
+                timezone = "Pacific/Pitcairn";
+        } else if ("PR".equals(country)) {
+                timezone = "America/Puerto_Rico";
+        } else if ("PS".equals(country)) {
+                timezone = "Asia/Gaza";
+        } else if ("PT".equals(country)) {
+            if ("02".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("03".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("04".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("05".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("06".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("07".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("08".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("09".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("10".equals(region)) {
+                  timezone = "Atlantic/Madeira";
+            } else if ("11".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("13".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("14".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("16".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("17".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("18".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("19".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("20".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("21".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("22".equals(region)) {
+                  timezone = "Europe/Lisbon";
+            } else if ("23".equals(region)) {
+                  timezone = "Atlantic/Azores";
+            }
+        } else if ("PW".equals(country)) {
+                timezone = "Pacific/Palau";
+        } else if ("PY".equals(country)) {
+                timezone = "America/Asuncion";
+        } else if ("QA".equals(country)) {
+                timezone = "Asia/Qatar";
+        } else if ("RE".equals(country)) {
+                timezone = "Indian/Reunion";
+        } else if ("RO".equals(country)) {
+                timezone = "Europe/Bucharest";
+        } else if ("RS".equals(country)) {
+                timezone = "Europe/Belgrade";
+        } else if ("RU".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Novokuznetsk";
+            } else if ("04".equals(region)) {
+                  timezone = "Asia/Novosibirsk";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Vladivostok";
+            } else if ("06".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("07".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("08".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("09".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("10".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("11".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("12".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("15".equals(region)) {
+                  timezone = "Asia/Anadyr";
+            } else if ("16".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("17".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("18".equals(region)) {
+                  timezone = "Asia/Krasnoyarsk";
+            } else if ("20".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("21".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("22".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("23".equals(region)) {
+                  timezone = "Europe/Kaliningrad";
+            } else if ("24".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("25".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("26".equals(region)) {
+                  timezone = "Asia/Kamchatka";
+            } else if ("27".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("28".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("29".equals(region)) {
+                  timezone = "Asia/Novokuznetsk";
+            } else if ("30".equals(region)) {
+                  timezone = "Asia/Vladivostok";
+            } else if ("31".equals(region)) {
+                  timezone = "Asia/Krasnoyarsk";
+            } else if ("32".equals(region)) {
+                  timezone = "Asia/Omsk";
+            } else if ("33".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("34".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("35".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("36".equals(region)) {
+                  timezone = "Asia/Anadyr";
+            } else if ("37".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("38".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("39".equals(region)) {
+                  timezone = "Asia/Krasnoyarsk";
+            } else if ("40".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("41".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("42".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("43".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("44".equals(region)) {
+                  timezone = "Asia/Magadan";
+            } else if ("45".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("46".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("47".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("48".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("49".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("50".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("51".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("52".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("53".equals(region)) {
+                  timezone = "Asia/Novosibirsk";
+            } else if ("54".equals(region)) {
+                  timezone = "Asia/Omsk";
+            } else if ("55".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("56".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("57".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("58".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("59".equals(region)) {
+                  timezone = "Asia/Vladivostok";
+            } else if ("60".equals(region)) {
+                  timezone = "Europe/Kaliningrad";
+            } else if ("61".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("62".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("63".equals(region)) {
+                  timezone = "Asia/Yakutsk";
+            } else if ("64".equals(region)) {
+                  timezone = "Asia/Sakhalin";
+            } else if ("65".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("66".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("67".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("68".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("69".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("70".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("71".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("72".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("73".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("74".equals(region)) {
+                  timezone = "Asia/Krasnoyarsk";
+            } else if ("75".equals(region)) {
+                  timezone = "Asia/Novosibirsk";
+            } else if ("76".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("77".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("78".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("79".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("80".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("81".equals(region)) {
+                  timezone = "Europe/Samara";
+            } else if ("82".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            } else if ("83".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("84".equals(region)) {
+                  timezone = "Europe/Volgograd";
+            } else if ("85".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("86".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("87".equals(region)) {
+                  timezone = "Asia/Novosibirsk";
+            } else if ("88".equals(region)) {
+                  timezone = "Europe/Moscow";
+            } else if ("89".equals(region)) {
+                  timezone = "Asia/Vladivostok";
+            } else if ("90".equals(region)) {
+                  timezone = "Asia/Yekaterinburg";
+            } else if ("91".equals(region)) {
+                  timezone = "Asia/Krasnoyarsk";
+            } else if ("92".equals(region)) {
+                  timezone = "Asia/Anadyr";
+            } else if ("93".equals(region)) {
+                  timezone = "Asia/Irkutsk";
+            }
+        } else if ("RW".equals(country)) {
+                timezone = "Africa/Kigali";
+        } else if ("SA".equals(country)) {
+                timezone = "Asia/Riyadh";
+        } else if ("SB".equals(country)) {
+                timezone = "Pacific/Guadalcanal";
+        } else if ("SC".equals(country)) {
+                timezone = "Indian/Mahe";
+        } else if ("SD".equals(country)) {
+                timezone = "Africa/Khartoum";
+        } else if ("SE".equals(country)) {
+                timezone = "Europe/Stockholm";
+        } else if ("SG".equals(country)) {
+                timezone = "Asia/Singapore";
+        } else if ("SH".equals(country)) {
+                timezone = "Atlantic/St_Helena";
+        } else if ("SI".equals(country)) {
+                timezone = "Europe/Ljubljana";
+        } else if ("SJ".equals(country)) {
+                timezone = "Arctic/Longyearbyen";
+        } else if ("SK".equals(country)) {
+                timezone = "Europe/Bratislava";
+        } else if ("SL".equals(country)) {
+                timezone = "Africa/Freetown";
+        } else if ("SM".equals(country)) {
+                timezone = "Europe/San_Marino";
+        } else if ("SN".equals(country)) {
+                timezone = "Africa/Dakar";
+        } else if ("SO".equals(country)) {
+                timezone = "Africa/Mogadishu";
+        } else if ("SR".equals(country)) {
+                timezone = "America/Paramaribo";
+        } else if ("SS".equals(country)) {
+                timezone = "Africa/Juba";
+        } else if ("ST".equals(country)) {
+                timezone = "Africa/Sao_Tome";
+        } else if ("SV".equals(country)) {
+                timezone = "America/El_Salvador";
+        } else if ("SX".equals(country)) {
+                timezone = "America/Curacao";
+        } else if ("SY".equals(country)) {
+                timezone = "Asia/Damascus";
+        } else if ("SZ".equals(country)) {
+                timezone = "Africa/Mbabane";
+        } else if ("TC".equals(country)) {
+                timezone = "America/Grand_Turk";
+        } else if ("TD".equals(country)) {
+                timezone = "Africa/Ndjamena";
+        } else if ("TF".equals(country)) {
+                timezone = "Indian/Kerguelen";
+        } else if ("TG".equals(country)) {
+                timezone = "Africa/Lome";
+        } else if ("TH".equals(country)) {
+                timezone = "Asia/Bangkok";
+        } else if ("TJ".equals(country)) {
+                timezone = "Asia/Dushanbe";
+        } else if ("TK".equals(country)) {
+                timezone = "Pacific/Fakaofo";
+        } else if ("TL".equals(country)) {
+                timezone = "Asia/Dili";
+        } else if ("TM".equals(country)) {
+                timezone = "Asia/Ashgabat";
+        } else if ("TN".equals(country)) {
+                timezone = "Africa/Tunis";
+        } else if ("TO".equals(country)) {
+                timezone = "Pacific/Tongatapu";
+        } else if ("TR".equals(country)) {
+                timezone = "Asia/Istanbul";
+        } else if ("TT".equals(country)) {
+                timezone = "America/Port_of_Spain";
+        } else if ("TV".equals(country)) {
+                timezone = "Pacific/Funafuti";
+        } else if ("TW".equals(country)) {
+                timezone = "Asia/Taipei";
+        } else if ("TZ".equals(country)) {
+                timezone = "Africa/Dar_es_Salaam";
+        } else if ("UA".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("02".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("03".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("04".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("05".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("06".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("07".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("08".equals(region)) {
+                  timezone = "Europe/Simferopol";
+            } else if ("09".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("10".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("11".equals(region)) {
+                  timezone = "Europe/Simferopol";
+            } else if ("12".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("13".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("14".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("15".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("16".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("17".equals(region)) {
+                  timezone = "Europe/Simferopol";
+            } else if ("18".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("19".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("20".equals(region)) {
+                  timezone = "Europe/Simferopol";
+            } else if ("21".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("22".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("23".equals(region)) {
+                  timezone = "Europe/Kiev";
+            } else if ("24".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("25".equals(region)) {
+                  timezone = "Europe/Uzhgorod";
+            } else if ("26".equals(region)) {
+                  timezone = "Europe/Zaporozhye";
+            } else if ("27".equals(region)) {
+                  timezone = "Europe/Kiev";
+            }
+        } else if ("UG".equals(country)) {
+                timezone = "Africa/Kampala";
+        } else if ("UM".equals(country)) {
+                timezone = "Pacific/Wake";
+        } else if ("US".equals(country)) {
+            if ("AK".equals(region)) {
+                  timezone = "America/Anchorage";
+            } else if ("AL".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("AR".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("AZ".equals(region)) {
+                  timezone = "America/Phoenix";
+            } else if ("CA".equals(region)) {
+                  timezone = "America/Los_Angeles";
+            } else if ("CO".equals(region)) {
+                  timezone = "America/Denver";
+            } else if ("CT".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("DC".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("DE".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("FL".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("GA".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("HI".equals(region)) {
+                  timezone = "Pacific/Honolulu";
+            } else if ("IA".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("ID".equals(region)) {
+                  timezone = "America/Denver";
+            } else if ("IL".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("IN".equals(region)) {
+                  timezone = "America/Indiana/Indianapolis";
+            } else if ("KS".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("KY".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("LA".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("MA".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("MD".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("ME".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("MI".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("MN".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("MO".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("MS".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("MT".equals(region)) {
+                  timezone = "America/Denver";
+            } else if ("NC".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("ND".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("NE".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("NH".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("NJ".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("NM".equals(region)) {
+                  timezone = "America/Denver";
+            } else if ("NV".equals(region)) {
+                  timezone = "America/Los_Angeles";
+            } else if ("NY".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("OH".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("OK".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("OR".equals(region)) {
+                  timezone = "America/Los_Angeles";
+            } else if ("PA".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("RI".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("SC".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("SD".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("TN".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("TX".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("UT".equals(region)) {
+                  timezone = "America/Denver";
+            } else if ("VA".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("VT".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("WA".equals(region)) {
+                  timezone = "America/Los_Angeles";
+            } else if ("WI".equals(region)) {
+                  timezone = "America/Chicago";
+            } else if ("WV".equals(region)) {
+                  timezone = "America/New_York";
+            } else if ("WY".equals(region)) {
+                  timezone = "America/Denver";
+            }
+        } else if ("UY".equals(country)) {
+                timezone = "America/Montevideo";
+        } else if ("UZ".equals(country)) {
+            if ("01".equals(region)) {
+                  timezone = "Asia/Tashkent";
+            } else if ("02".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("03".equals(region)) {
+                  timezone = "Asia/Tashkent";
+            } else if ("05".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("06".equals(region)) {
+                  timezone = "Asia/Tashkent";
+            } else if ("07".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("08".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("09".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("10".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("12".equals(region)) {
+                  timezone = "Asia/Samarkand";
+            } else if ("13".equals(region)) {
+                  timezone = "Asia/Tashkent";
+            } else if ("14".equals(region)) {
+                  timezone = "Asia/Tashkent";
+            }
+        } else if ("VA".equals(country)) {
+                timezone = "Europe/Vatican";
+        } else if ("VC".equals(country)) {
+                timezone = "America/St_Vincent";
+        } else if ("VE".equals(country)) {
+                timezone = "America/Caracas";
+        } else if ("VG".equals(country)) {
+                timezone = "America/Tortola";
+        } else if ("VI".equals(country)) {
+                timezone = "America/St_Thomas";
+        } else if ("VN".equals(country)) {
+                timezone = "Asia/Phnom_Penh";
+        } else if ("VU".equals(country)) {
+                timezone = "Pacific/Efate";
+        } else if ("WF".equals(country)) {
+                timezone = "Pacific/Wallis";
+        } else if ("WS".equals(country)) {
+                timezone = "Pacific/Pago_Pago";
+        } else if ("YE".equals(country)) {
+                timezone = "Asia/Aden";
+        } else if ("YT".equals(country)) {
+                timezone = "Indian/Mayotte";
+        } else if ("YU".equals(country)) {
+                timezone = "Europe/Belgrade";
+        } else if ("ZA".equals(country)) {
+                timezone = "Africa/Johannesburg";
+        } else if ("ZM".equals(country)) {
+                timezone = "Africa/Lusaka";
+        } else if ("ZW".equals(country)) {
+                timezone = "Africa/Harare";
+        }
+        return timezone;
     }
-    if (region == null) {
-      region = "";
-    }
-    if (country.equals("US") == true) {
-      if (region.equals("AL") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("AK") == true) {
-        timezone = "America/Anchorage";
-      } else if (region.equals("AZ") == true) {
-        timezone = "America/Phoenix";
-      } else if (region.equals("AR") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("CA") == true) {
-        timezone = "America/Los_Angeles";
-      } else if (region.equals("CO") == true) {
-        timezone = "America/Denver";
-      } else if (region.equals("CT") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("DE") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("DC") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("FL") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("GA") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("HI") == true) {
-        timezone = "Pacific/Honolulu";
-      } else if (region.equals("ID") == true) {
-        timezone = "America/Denver";
-      } else if (region.equals("IL") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("IN") == true) {
-        timezone = "America/Indianapolis";
-      } else if (region.equals("IA") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("KS") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("KY") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("LA") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("ME") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("MD") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("MA") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("MI") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("MN") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("MS") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("MO") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("MT") == true) {
-        timezone = "America/Denver";
-      } else if (region.equals("NE") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("NV") == true) {
-        timezone = "America/Los_Angeles";
-      } else if (region.equals("NH") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("NJ") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("NM") == true) {
-        timezone = "America/Denver";
-      } else if (region.equals("NY") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("NC") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("ND") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("OH") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("OK") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("OR") == true) {
-        timezone = "America/Los_Angeles";
-      } else if (region.equals("PA") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("RI") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("SC") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("SD") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("TN") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("TX") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("UT") == true) {
-        timezone = "America/Denver";
-      } else if (region.equals("VT") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("VA") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("WA") == true) {
-        timezone = "America/Los_Angeles";
-      } else if (region.equals("WV") == true) {
-        timezone = "America/New_York";
-      } else if (region.equals("WI") == true) {
-        timezone = "America/Chicago";
-      } else if (region.equals("WY") == true) {
-        timezone = "America/Denver";
-      }
-    } else if (country.equals("CA") == true) {
-      if (region.equals("AB") == true) {
-        timezone = "America/Edmonton";
-      } else if (region.equals("BC") == true) {
-        timezone = "America/Vancouver";
-      } else if (region.equals("MB") == true) {
-        timezone = "America/Winnipeg";
-      } else if (region.equals("NB") == true) {
-        timezone = "America/Halifax";
-      } else if (region.equals("NL") == true) {
-        timezone = "America/St_Johns";
-      } else if (region.equals("NT") == true) {
-        timezone = "America/Yellowknife";
-      } else if (region.equals("NS") == true) {
-        timezone = "America/Halifax";
-      } else if (region.equals("NU") == true) {
-        timezone = "America/Rankin_Inlet";
-      } else if (region.equals("ON") == true) {
-        timezone = "America/Rainy_River";
-      } else if (region.equals("PE") == true) {
-        timezone = "America/Halifax";
-      } else if (region.equals("QC") == true) {
-        timezone = "America/Montreal";
-      } else if (region.equals("SK") == true) {
-        timezone = "America/Regina";
-      } else if (region.equals("YT") == true) {
-        timezone = "America/Whitehorse";
-      }
-    } else if (country.equals("AU") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Australia/Canberra";
-      } else if (region.equals("02") == true) {
-        timezone = "Australia/NSW";
-      } else if (region.equals("03") == true) {
-        timezone = "Australia/North";
-      } else if (region.equals("04") == true) {
-        timezone = "Australia/Queensland";
-      } else if (region.equals("05") == true) {
-        timezone = "Australia/South";
-      } else if (region.equals("06") == true) {
-        timezone = "Australia/Tasmania";
-      } else if (region.equals("07") == true) {
-        timezone = "Australia/Victoria";
-      } else if (region.equals("08") == true) {
-        timezone = "Australia/West";
-      }
-    } else if (country.equals("AS") == true) {
-      timezone = "US/Samoa";
-    } else if (country.equals("CI") == true) {
-      timezone = "Africa/Abidjan";
-    } else if (country.equals("GH") == true) {
-      timezone = "Africa/Accra";
-    } else if (country.equals("DZ") == true) {
-      timezone = "Africa/Algiers";
-    } else if (country.equals("ER") == true) {
-      timezone = "Africa/Asmera";
-    } else if (country.equals("ML") == true) {
-      timezone = "Africa/Bamako";
-    } else if (country.equals("CF") == true) {
-      timezone = "Africa/Bangui";
-    } else if (country.equals("GM") == true) {
-      timezone = "Africa/Banjul";
-    } else if (country.equals("GW") == true) {
-      timezone = "Africa/Bissau";
-    } else if (country.equals("CG") == true) {
-      timezone = "Africa/Brazzaville";
-    } else if (country.equals("BI") == true) {
-      timezone = "Africa/Bujumbura";
-    } else if (country.equals("EG") == true) {
-      timezone = "Africa/Cairo";
-    } else if (country.equals("MA") == true) {
-      timezone = "Africa/Casablanca";
-    } else if (country.equals("GN") == true) {
-      timezone = "Africa/Conakry";
-    } else if (country.equals("SN") == true) {
-      timezone = "Africa/Dakar";
-    } else if (country.equals("DJ") == true) {
-      timezone = "Africa/Djibouti";
-    } else if (country.equals("SL") == true) {
-      timezone = "Africa/Freetown";
-    } else if (country.equals("BW") == true) {
-      timezone = "Africa/Gaborone";
-    } else if (country.equals("ZW") == true) {
-      timezone = "Africa/Harare";
-    } else if (country.equals("ZA") == true) {
-      timezone = "Africa/Johannesburg";
-    } else if (country.equals("UG") == true) {
-      timezone = "Africa/Kampala";
-    } else if (country.equals("SD") == true) {
-      timezone = "Africa/Khartoum";
-    } else if (country.equals("RW") == true) {
-      timezone = "Africa/Kigali";
-    } else if (country.equals("NG") == true) {
-      timezone = "Africa/Lagos";
-    } else if (country.equals("GA") == true) {
-      timezone = "Africa/Libreville";
-    } else if (country.equals("TG") == true) {
-      timezone = "Africa/Lome";
-    } else if (country.equals("AO") == true) {
-      timezone = "Africa/Luanda";
-    } else if (country.equals("ZM") == true) {
-      timezone = "Africa/Lusaka";
-    } else if (country.equals("GQ") == true) {
-      timezone = "Africa/Malabo";
-    } else if (country.equals("MZ") == true) {
-      timezone = "Africa/Maputo";
-    } else if (country.equals("LS") == true) {
-      timezone = "Africa/Maseru";
-    } else if (country.equals("SZ") == true) {
-      timezone = "Africa/Mbabane";
-    } else if (country.equals("SO") == true) {
-      timezone = "Africa/Mogadishu";
-    } else if (country.equals("LR") == true) {
-      timezone = "Africa/Monrovia";
-    } else if (country.equals("KE") == true) {
-      timezone = "Africa/Nairobi";
-    } else if (country.equals("TD") == true) {
-      timezone = "Africa/Ndjamena";
-    } else if (country.equals("NE") == true) {
-      timezone = "Africa/Niamey";
-    } else if (country.equals("MR") == true) {
-      timezone = "Africa/Nouakchott";
-    } else if (country.equals("BF") == true) {
-      timezone = "Africa/Ouagadougou";
-    } else if (country.equals("ST") == true) {
-      timezone = "Africa/Sao_Tome";
-    } else if (country.equals("LY") == true) {
-      timezone = "Africa/Tripoli";
-    } else if (country.equals("TN") == true) {
-      timezone = "Africa/Tunis";
-    } else if (country.equals("AI") == true) {
-      timezone = "America/Anguilla";
-    } else if (country.equals("AG") == true) {
-      timezone = "America/Antigua";
-    } else if (country.equals("AW") == true) {
-      timezone = "America/Aruba";
-    } else if (country.equals("BB") == true) {
-      timezone = "America/Barbados";
-    } else if (country.equals("BZ") == true) {
-      timezone = "America/Belize";
-    } else if (country.equals("CO") == true) {
-      timezone = "America/Bogota";
-    } else if (country.equals("VE") == true) {
-      timezone = "America/Caracas";
-    } else if (country.equals("KY") == true) {
-      timezone = "America/Cayman";
-    } else if (country.equals("CR") == true) {
-      timezone = "America/Costa_Rica";
-    } else if (country.equals("DM") == true) {
-      timezone = "America/Dominica";
-    } else if (country.equals("SV") == true) {
-      timezone = "America/El_Salvador";
-    } else if (country.equals("GD") == true) {
-      timezone = "America/Grenada";
-    } else if (country.equals("FR") == true) {
-      timezone = "Europe/Paris";
-    } else if (country.equals("GP") == true) {
-      timezone = "America/Guadeloupe";
-    } else if (country.equals("GT") == true) {
-      timezone = "America/Guatemala";
-    } else if (country.equals("GY") == true) {
-      timezone = "America/Guyana";
-    } else if (country.equals("CU") == true) {
-      timezone = "America/Havana";
-    } else if (country.equals("JM") == true) {
-      timezone = "America/Jamaica";
-    } else if (country.equals("BO") == true) {
-      timezone = "America/La_Paz";
-    } else if (country.equals("PE") == true) {
-      timezone = "America/Lima";
-    } else if (country.equals("NI") == true) {
-      timezone = "America/Managua";
-    } else if (country.equals("MQ") == true) {
-      timezone = "America/Martinique";
-    } else if (country.equals("UY") == true) {
-      timezone = "America/Montevideo";
-    } else if (country.equals("MS") == true) {
-      timezone = "America/Montserrat";
-    } else if (country.equals("BS") == true) {
-      timezone = "America/Nassau";
-    } else if (country.equals("PA") == true) {
-      timezone = "America/Panama";
-    } else if (country.equals("SR") == true) {
-      timezone = "America/Paramaribo";
-    } else if (country.equals("PR") == true) {
-      timezone = "America/Puerto_Rico";
-    } else if (country.equals("KN") == true) {
-      timezone = "America/St_Kitts";
-    } else if (country.equals("LC") == true) {
-      timezone = "America/St_Lucia";
-    } else if (country.equals("VC") == true) {
-      timezone = "America/St_Vincent";
-    } else if (country.equals("HN") == true) {
-      timezone = "America/Tegucigalpa";
-    } else if (country.equals("YE") == true) {
-      timezone = "Asia/Aden";
-    } else if (country.equals("JO") == true) {
-      timezone = "Asia/Amman";
-    } else if (country.equals("TM") == true) {
-      timezone = "Asia/Ashgabat";
-    } else if (country.equals("IQ") == true) {
-      timezone = "Asia/Baghdad";
-    } else if (country.equals("BH") == true) {
-      timezone = "Asia/Bahrain";
-    } else if (country.equals("AZ") == true) {
-      timezone = "Asia/Baku";
-    } else if (country.equals("TH") == true) {
-      timezone = "Asia/Bangkok";
-    } else if (country.equals("LB") == true) {
-      timezone = "Asia/Beirut";
-    } else if (country.equals("KG") == true) {
-      timezone = "Asia/Bishkek";
-    } else if (country.equals("BN") == true) {
-      timezone = "Asia/Brunei";
-    } else if (country.equals("IN") == true) {
-      timezone = "Asia/Calcutta";
-    } else if (country.equals("MN") == true) {
-      timezone = "Asia/Choibalsan";
-    } else if (country.equals("LK") == true) {
-      timezone = "Asia/Colombo";
-    } else if (country.equals("BD") == true) {
-      timezone = "Asia/Dhaka";
-    } else if (country.equals("AE") == true) {
-      timezone = "Asia/Dubai";
-    } else if (country.equals("TJ") == true) {
-      timezone = "Asia/Dushanbe";
-    } else if (country.equals("HK") == true) {
-      timezone = "Asia/Hong_Kong";
-    } else if (country.equals("TR") == true) {
-      timezone = "Asia/Istanbul";
-    } else if (country.equals("IL") == true) {
-      timezone = "Asia/Jerusalem";
-    } else if (country.equals("AF") == true) {
-      timezone = "Asia/Kabul";
-    } else if (country.equals("PK") == true) {
-      timezone = "Asia/Karachi";
-    } else if (country.equals("NP") == true) {
-      timezone = "Asia/Katmandu";
-    } else if (country.equals("KW") == true) {
-      timezone = "Asia/Kuwait";
-    } else if (country.equals("MO") == true) {
-      timezone = "Asia/Macao";
-    } else if (country.equals("PH") == true) {
-      timezone = "Asia/Manila";
-    } else if (country.equals("OM") == true) {
-      timezone = "Asia/Muscat";
-    } else if (country.equals("CY") == true) {
-      timezone = "Asia/Nicosia";
-    } else if (country.equals("KP") == true) {
-      timezone = "Asia/Pyongyang";
-    } else if (country.equals("QA") == true) {
-      timezone = "Asia/Qatar";
-    } else if (country.equals("MM") == true) {
-      timezone = "Asia/Rangoon";
-    } else if (country.equals("SA") == true) {
-      timezone = "Asia/Riyadh";
-    } else if (country.equals("KR") == true) {
-      timezone = "Asia/Seoul";
-    } else if (country.equals("SG") == true) {
-      timezone = "Asia/Singapore";
-    } else if (country.equals("TW") == true) {
-      timezone = "Asia/Taipei";
-    } else if (country.equals("GE") == true) {
-      timezone = "Asia/Tbilisi";
-    } else if (country.equals("BT") == true) {
-      timezone = "Asia/Thimphu";
-    } else if (country.equals("JP") == true) {
-      timezone = "Asia/Tokyo";
-    } else if (country.equals("LA") == true) {
-      timezone = "Asia/Vientiane";
-    } else if (country.equals("AM") == true) {
-      timezone = "Asia/Yerevan";
-    } else if (country.equals("BM") == true) {
-      timezone = "Atlantic/Bermuda";
-    } else if (country.equals("CV") == true) {
-      timezone = "Atlantic/Cape_Verde";
-    } else if (country.equals("FO") == true) {
-      timezone = "Atlantic/Faeroe";
-    } else if (country.equals("IS") == true) {
-      timezone = "Atlantic/Reykjavik";
-    } else if (country.equals("GS") == true) {
-      timezone = "Atlantic/South_Georgia";
-    } else if (country.equals("SH") == true) {
-      timezone = "Atlantic/St_Helena";
-    } else if (country.equals("CL") == true) {
-      timezone = "Chile/Continental";
-    } else if (country.equals("NL") == true) {
-      timezone = "Europe/Amsterdam";
-    } else if (country.equals("AD") == true) {
-      timezone = "Europe/Andorra";
-    } else if (country.equals("GR") == true) {
-      timezone = "Europe/Athens";
-    } else if (country.equals("YU") == true) {
-      timezone = "Europe/Belgrade";
-    } else if (country.equals("DE") == true) {
-      timezone = "Europe/Berlin";
-    } else if (country.equals("SK") == true) {
-      timezone = "Europe/Bratislava";
-    } else if (country.equals("BE") == true) {
-      timezone = "Europe/Brussels";
-    } else if (country.equals("RO") == true) {
-      timezone = "Europe/Bucharest";
-    } else if (country.equals("HU") == true) {
-      timezone = "Europe/Budapest";
-    } else if (country.equals("DK") == true) {
-      timezone = "Europe/Copenhagen";
-    } else if (country.equals("IE") == true) {
-      timezone = "Europe/Dublin";
-    } else if (country.equals("GI") == true) {
-      timezone = "Europe/Gibraltar";
-    } else if (country.equals("FI") == true) {
-      timezone = "Europe/Helsinki";
-    } else if (country.equals("SI") == true) {
-      timezone = "Europe/Ljubljana";
-    } else if (country.equals("GB") == true) {
-      timezone = "Europe/London";
-    } else if (country.equals("LU") == true) {
-      timezone = "Europe/Luxembourg";
-    } else if (country.equals("MT") == true) {
-      timezone = "Europe/Malta";
-    } else if (country.equals("BY") == true) {
-      timezone = "Europe/Minsk";
-    } else if (country.equals("MC") == true) {
-      timezone = "Europe/Monaco";
-    } else if (country.equals("NO") == true) {
-      timezone = "Europe/Oslo";
-    } else if (country.equals("CZ") == true) {
-      timezone = "Europe/Prague";
-    } else if (country.equals("LV") == true) {
-      timezone = "Europe/Riga";
-    } else if (country.equals("IT") == true) {
-      timezone = "Europe/Rome";
-    } else if (country.equals("SM") == true) {
-      timezone = "Europe/San_Marino";
-    } else if (country.equals("BA") == true) {
-      timezone = "Europe/Sarajevo";
-    } else if (country.equals("MK") == true) {
-      timezone = "Europe/Skopje";
-    } else if (country.equals("BG") == true) {
-      timezone = "Europe/Sofia";
-    } else if (country.equals("SE") == true) {
-      timezone = "Europe/Stockholm";
-    } else if (country.equals("EE") == true) {
-      timezone = "Europe/Tallinn";
-    } else if (country.equals("AL") == true) {
-      timezone = "Europe/Tirane";
-    } else if (country.equals("LI") == true) {
-      timezone = "Europe/Vaduz";
-    } else if (country.equals("VA") == true) {
-      timezone = "Europe/Vatican";
-    } else if (country.equals("AT") == true) {
-      timezone = "Europe/Vienna";
-    } else if (country.equals("LT") == true) {
-      timezone = "Europe/Vilnius";
-    } else if (country.equals("PL") == true) {
-      timezone = "Europe/Warsaw";
-    } else if (country.equals("HR") == true) {
-      timezone = "Europe/Zagreb";
-    } else if (country.equals("IR") == true) {
-      timezone = "Asia/Tehran";
-    } else if (country.equals("MG") == true) {
-      timezone = "Indian/Antananarivo";
-    } else if (country.equals("CX") == true) {
-      timezone = "Indian/Christmas";
-    } else if (country.equals("CC") == true) {
-      timezone = "Indian/Cocos";
-    } else if (country.equals("KM") == true) {
-      timezone = "Indian/Comoro";
-    } else if (country.equals("MV") == true) {
-      timezone = "Indian/Maldives";
-    } else if (country.equals("MU") == true) {
-      timezone = "Indian/Mauritius";
-    } else if (country.equals("YT") == true) {
-      timezone = "Indian/Mayotte";
-    } else if (country.equals("RE") == true) {
-      timezone = "Indian/Reunion";
-    } else if (country.equals("FJ") == true) {
-      timezone = "Pacific/Fiji";
-    } else if (country.equals("TV") == true) {
-      timezone = "Pacific/Funafuti";
-    } else if (country.equals("GU") == true) {
-      timezone = "Pacific/Guam";
-    } else if (country.equals("NR") == true) {
-      timezone = "Pacific/Nauru";
-    } else if (country.equals("NU") == true) {
-      timezone = "Pacific/Niue";
-    } else if (country.equals("NF") == true) {
-      timezone = "Pacific/Norfolk";
-    } else if (country.equals("PW") == true) {
-      timezone = "Pacific/Palau";
-    } else if (country.equals("PN") == true) {
-      timezone = "Pacific/Pitcairn";
-    } else if (country.equals("CK") == true) {
-      timezone = "Pacific/Rarotonga";
-    } else if (country.equals("WS") == true) {
-      timezone = "Pacific/Samoa";
-    } else if (country.equals("KI") == true) {
-      timezone = "Pacific/Tarawa";
-    } else if (country.equals("TO") == true) {
-      timezone = "Pacific/Tongatapu";
-    } else if (country.equals("WF") == true) {
-      timezone = "Pacific/Wallis";
-    } else if (country.equals("TZ") == true) {
-      timezone = "Africa/Dar_es_Salaam";
-    } else if (country.equals("VN") == true) {
-      timezone = "Asia/Phnom_Penh";
-    } else if (country.equals("KH") == true) {
-      timezone = "Asia/Phnom_Penh";
-    } else if (country.equals("CM") == true) {
-      timezone = "Africa/Lagos";
-    } else if (country.equals("DO") == true) {
-      timezone = "America/Santo_Domingo";
-    } else if (country.equals("ET") == true) {
-      timezone = "Africa/Addis_Ababa";
-    } else if (country.equals("FX") == true) {
-      timezone = "Europe/Paris";
-    } else if (country.equals("HT") == true) {
-      timezone = "America/Port-au-Prince";
-    } else if (country.equals("CH") == true) {
-      timezone = "Europe/Zurich";
-    } else if (country.equals("AN") == true) {
-      timezone = "America/Curacao";
-    } else if (country.equals("BJ") == true) {
-      timezone = "Africa/Porto-Novo";
-    } else if (country.equals("EH") == true) {
-      timezone = "Africa/El_Aaiun";
-    } else if (country.equals("FK") == true) {
-      timezone = "Atlantic/Stanley";
-    } else if (country.equals("GF") == true) {
-      timezone = "America/Cayenne";
-    } else if (country.equals("IO") == true) {
-      timezone = "Indian/Chagos";
-    } else if (country.equals("MD") == true) {
-      timezone = "Europe/Chisinau";
-    } else if (country.equals("MP") == true) {
-      timezone = "Pacific/Saipan";
-    } else if (country.equals("MW") == true) {
-      timezone = "Africa/Blantyre";
-    } else if (country.equals("NA") == true) {
-      timezone = "Africa/Windhoek";
-    } else if (country.equals("NC") == true) {
-      timezone = "Pacific/Noumea";
-    } else if (country.equals("PG") == true) {
-      timezone = "Pacific/Port_Moresby";
-    } else if (country.equals("PM") == true) {
-      timezone = "America/Miquelon";
-    } else if (country.equals("PS") == true) {
-      timezone = "Asia/Gaza";
-    } else if (country.equals("PY") == true) {
-      timezone = "America/Asuncion";
-    } else if (country.equals("SB") == true) {
-      timezone = "Pacific/Guadalcanal";
-    } else if (country.equals("SC") == true) {
-      timezone = "Indian/Mahe";
-    } else if (country.equals("SJ") == true) {
-      timezone = "Arctic/Longyearbyen";
-    } else if (country.equals("SY") == true) {
-      timezone = "Asia/Damascus";
-    } else if (country.equals("TC") == true) {
-      timezone = "America/Grand_Turk";
-    } else if (country.equals("TF") == true) {
-      timezone = "Indian/Kerguelen";
-    } else if (country.equals("TK") == true) {
-      timezone = "Pacific/Fakaofo";
-    } else if (country.equals("TT") == true) {
-      timezone = "America/Port_of_Spain";
-    } else if (country.equals("VG") == true) {
-      timezone = "America/Tortola";
-    } else if (country.equals("VI") == true) {
-      timezone = "America/St_Thomas";
-    } else if (country.equals("VU") == true) {
-      timezone = "Pacific/Efate";
-    } else if (country.equals("RS") == true) {
-      timezone = "Europe/Belgrade";
-    } else if (country.equals("ME") == true) {
-      timezone = "Europe/Podgorica";
-    } else if (country.equals("AX") == true) {
-      timezone = "Europe/Mariehamn";
-    } else if (country.equals("GG") == true) {
-      timezone = "Europe/Guernsey";
-    } else if (country.equals("IM") == true) {
-      timezone = "Europe/Isle_of_Man";
-    } else if (country.equals("JE") == true) {
-      timezone = "Europe/Jersey";
-    } else if (country.equals("BL") == true) {
-      timezone = "America/St_Barthelemy";
-    } else if (country.equals("MF") == true) {
-      timezone = "America/Marigot";
-    } else if (country.equals("AR") == true) {
-      if (region.equals("01") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("02") == true) {
-        timezone = "America/Argentina/Catamarca";
-      } else if (region.equals("03") == true) {
-        timezone = "America/Argentina/Tucuman";
-      } else if (region.equals("04") == true) {
-        timezone = "America/Argentina/Rio_Gallegos";
-      } else if (region.equals("05") == true) {
-        timezone = "America/Argentina/Cordoba";
-      } else if (region.equals("06") == true) {
-        timezone = "America/Argentina/Tucuman";
-      } else if (region.equals("07") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("08") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("09") == true) {
-        timezone = "America/Argentina/Tucuman";
-      } else if (region.equals("10") == true) {
-        timezone = "America/Argentina/Jujuy";
-      } else if (region.equals("11") == true) {
-        timezone = "America/Argentina/San_Luis";
-      } else if (region.equals("12") == true) {
-        timezone = "America/Argentina/La_Rioja";
-      } else if (region.equals("13") == true) {
-        timezone = "America/Argentina/Mendoza";
-      } else if (region.equals("14") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("15") == true) {
-        timezone = "America/Argentina/San_Luis";
-      } else if (region.equals("16") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("17") == true) {
-        timezone = "America/Argentina/Salta";
-      } else if (region.equals("18") == true) {
-        timezone = "America/Argentina/San_Juan";
-      } else if (region.equals("19") == true) {
-        timezone = "America/Argentina/San_Luis";
-      } else if (region.equals("20") == true) {
-        timezone = "America/Argentina/Rio_Gallegos";
-      } else if (region.equals("21") == true) {
-        timezone = "America/Argentina/Buenos_Aires";
-      } else if (region.equals("22") == true) {
-        timezone = "America/Argentina/Catamarca";
-      } else if (region.equals("23") == true) {
-        timezone = "America/Argentina/Ushuaia";
-      } else if (region.equals("24") == true) {
-        timezone = "America/Argentina/Tucuman";
-      }
-    } else if (country.equals("BR") == true) {
-      if (region.equals("01") == true) {
-        timezone = "America/Rio_Branco";
-      } else if (region.equals("02") == true) {
-        timezone = "America/Maceio";
-      } else if (region.equals("03") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("04") == true) {
-        timezone = "America/Manaus";
-      } else if (region.equals("05") == true) {
-        timezone = "America/Bahia";
-      } else if (region.equals("06") == true) {
-        timezone = "America/Fortaleza";
-      } else if (region.equals("07") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("08") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("11") == true) {
-        timezone = "America/Campo_Grande";
-      } else if (region.equals("13") == true) {
-        timezone = "America/Belem";
-      } else if (region.equals("14") == true) {
-        timezone = "America/Cuiaba";
-      } else if (region.equals("15") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("16") == true) {
-        timezone = "America/Belem";
-      } else if (region.equals("17") == true) {
-        timezone = "America/Recife";
-      } else if (region.equals("18") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("20") == true) {
-        timezone = "America/Fortaleza";
-      } else if (region.equals("21") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("22") == true) {
-        timezone = "America/Recife";
-      } else if (region.equals("23") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("24") == true) {
-        timezone = "America/Porto_Velho";
-      } else if (region.equals("25") == true) {
-        timezone = "America/Boa_Vista";
-      } else if (region.equals("26") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("27") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("28") == true) {
-        timezone = "America/Maceio";
-      } else if (region.equals("29") == true) {
-        timezone = "America/Sao_Paulo";
-      } else if (region.equals("30") == true) {
-        timezone = "America/Recife";
-      } else if (region.equals("31") == true) {
-        timezone = "America/Araguaina";
-      }
-    } else if (country.equals("CD") == true) {
-      if (region.equals("02") == true) {
-        timezone = "Africa/Kinshasa";
-      } else if (region.equals("05") == true) {
-        timezone = "Africa/Lubumbashi";
-      } else if (region.equals("06") == true) {
-        timezone = "Africa/Kinshasa";
-      } else if (region.equals("08") == true) {
-        timezone = "Africa/Kinshasa";
-      } else if (region.equals("10") == true) {
-        timezone = "Africa/Lubumbashi";
-      } else if (region.equals("11") == true) {
-        timezone = "Africa/Lubumbashi";
-      } else if (region.equals("12") == true) {
-        timezone = "Africa/Lubumbashi";
-      }
-    } else if (country.equals("CN") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("04") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("05") == true) {
-        timezone = "Asia/Harbin";
-      } else if (region.equals("06") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("07") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("08") == true) {
-        timezone = "Asia/Harbin";
-      } else if (region.equals("09") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("10") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("11") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("12") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Urumqi";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("15") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("16") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("18") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("19") == true) {
-        timezone = "Asia/Harbin";
-      } else if (region.equals("20") == true) {
-        timezone = "Asia/Harbin";
-      } else if (region.equals("21") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("22") == true) {
-        timezone = "Asia/Harbin";
-      } else if (region.equals("23") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("24") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("25") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("26") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("28") == true) {
-        timezone = "Asia/Shanghai";
-      } else if (region.equals("29") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("30") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("31") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("32") == true) {
-        timezone = "Asia/Chongqing";
-      } else if (region.equals("33") == true) {
-        timezone = "Asia/Chongqing";
-      }
-    } else if (country.equals("EC") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Pacific/Galapagos";
-      } else if (region.equals("02") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("03") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("04") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("05") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("06") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("07") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("08") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("09") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("10") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("11") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("12") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("13") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("14") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("15") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("17") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("18") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("19") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("20") == true) {
-        timezone = "America/Guayaquil";
-      } else if (region.equals("22") == true) {
-        timezone = "America/Guayaquil";
-      }
-    } else if (country.equals("ES") == true) {
-      if (region.equals("07") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("27") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("29") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("31") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("32") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("34") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("39") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("51") == true) {
-        timezone = "Africa/Ceuta";
-      } else if (region.equals("52") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("53") == true) {
-        timezone = "Atlantic/Canary";
-      } else if (region.equals("54") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("55") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("56") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("57") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("58") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("59") == true) {
-        timezone = "Europe/Madrid";
-      } else if (region.equals("60") == true) {
-        timezone = "Europe/Madrid";
-      }
-    } else if (country.equals("GL") == true) {
-      if (region.equals("01") == true) {
-        timezone = "America/Thule";
-      } else if (region.equals("02") == true) {
-        timezone = "America/Godthab";
-      } else if (region.equals("03") == true) {
-        timezone = "America/Godthab";
-      }
-    } else if (country.equals("ID") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Asia/Pontianak";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("04") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("05") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("06") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("07") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("08") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("09") == true) {
-        timezone = "Asia/Jayapura";
-      } else if (region.equals("10") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("11") == true) {
-        timezone = "Asia/Pontianak";
-      } else if (region.equals("12") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("15") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("16") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("17") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("18") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("19") == true) {
-        timezone = "Asia/Pontianak";
-      } else if (region.equals("20") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("21") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("22") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("23") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("24") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("25") == true) {
-        timezone = "Asia/Pontianak";
-      } else if (region.equals("26") == true) {
-        timezone = "Asia/Pontianak";
-      } else if (region.equals("30") == true) {
-        timezone = "Asia/Jakarta";
-      } else if (region.equals("31") == true) {
-        timezone = "Asia/Makassar";
-      } else if (region.equals("33") == true) {
-        timezone = "Asia/Jakarta";
-      }
-    } else if (country.equals("KZ") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Asia/Almaty";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Almaty";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("04") == true) {
-        timezone = "Asia/Aqtobe";
-      } else if (region.equals("05") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("06") == true) {
-        timezone = "Asia/Aqtau";
-      } else if (region.equals("07") == true) {
-        timezone = "Asia/Oral";
-      } else if (region.equals("08") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("09") == true) {
-        timezone = "Asia/Aqtau";
-      } else if (region.equals("10") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("11") == true) {
-        timezone = "Asia/Almaty";
-      } else if (region.equals("12") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Aqtobe";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Qyzylorda";
-      } else if (region.equals("15") == true) {
-        timezone = "Asia/Almaty";
-      } else if (region.equals("16") == true) {
-        timezone = "Asia/Aqtobe";
-      } else if (region.equals("17") == true) {
-        timezone = "Asia/Almaty";
-      }
-    } else if (country.equals("MX") == true) {
-      if (region.equals("01") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("02") == true) {
-        timezone = "America/Tijuana";
-      } else if (region.equals("03") == true) {
-        timezone = "America/Hermosillo";
-      } else if (region.equals("04") == true) {
-        timezone = "America/Merida";
-      } else if (region.equals("05") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("06") == true) {
-        timezone = "America/Chihuahua";
-      } else if (region.equals("07") == true) {
-        timezone = "America/Monterrey";
-      } else if (region.equals("08") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("09") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("10") == true) {
-        timezone = "America/Mazatlan";
-      } else if (region.equals("11") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("12") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("13") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("14") == true) {
-        timezone = "America/Mazatlan";
-      } else if (region.equals("15") == true) {
-        timezone = "America/Chihuahua";
-      } else if (region.equals("16") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("17") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("18") == true) {
-        timezone = "America/Mazatlan";
-      } else if (region.equals("19") == true) {
-        timezone = "America/Monterrey";
-      } else if (region.equals("20") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("21") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("22") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("23") == true) {
-        timezone = "America/Cancun";
-      } else if (region.equals("24") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("25") == true) {
-        timezone = "America/Mazatlan";
-      } else if (region.equals("26") == true) {
-        timezone = "America/Hermosillo";
-      } else if (region.equals("27") == true) {
-        timezone = "America/Merida";
-      } else if (region.equals("28") == true) {
-        timezone = "America/Monterrey";
-      } else if (region.equals("29") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("30") == true) {
-        timezone = "America/Mexico_City";
-      } else if (region.equals("31") == true) {
-        timezone = "America/Merida";
-      } else if (region.equals("32") == true) {
-        timezone = "America/Monterrey";
-      }
-    } else if (country.equals("MY") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("04") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("05") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("06") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("07") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("08") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("09") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("11") == true) {
-        timezone = "Asia/Kuching";
-      } else if (region.equals("12") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Kuala_Lumpur";
-      } else if (region.equals("15") == true) {
-        timezone = "Asia/Kuching";
-      } else if (region.equals("16") == true) {
-        timezone = "Asia/Kuching";
-      }
-    } else if (country.equals("NZ") == true) {
-      if (region.equals("85") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("E7") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("E8") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("E9") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F1") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F2") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F3") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F4") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F5") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F7") == true) {
-        timezone = "Pacific/Chatham";
-      } else if (region.equals("F8") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("F9") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("G1") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("G2") == true) {
-        timezone = "Pacific/Auckland";
-      } else if (region.equals("G3") == true) {
-        timezone = "Pacific/Auckland";
-      }
-    } else if (country.equals("PT") == true) {
-      if (region.equals("02") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("03") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("04") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("05") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("06") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("07") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("08") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("09") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("10") == true) {
-        timezone = "Atlantic/Madeira";
-      } else if (region.equals("11") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("13") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("14") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("16") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("17") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("18") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("19") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("20") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("21") == true) {
-        timezone = "Europe/Lisbon";
-      } else if (region.equals("22") == true) {
-        timezone = "Europe/Lisbon";
-      }
-    } else if (country.equals("RU") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Novokuznetsk";
-      } else if (region.equals("04") == true) {
-        timezone = "Asia/Novosibirsk";
-      } else if (region.equals("05") == true) {
-        timezone = "Asia/Vladivostok";
-      } else if (region.equals("06") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("07") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("08") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("09") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("10") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("11") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("15") == true) {
-        timezone = "Asia/Anadyr";
-      } else if (region.equals("16") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("17") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("18") == true) {
-        timezone = "Asia/Krasnoyarsk";
-      } else if (region.equals("20") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("21") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("22") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("23") == true) {
-        timezone = "Europe/Kaliningrad";
-      } else if (region.equals("24") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("25") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("26") == true) {
-        timezone = "Asia/Kamchatka";
-      } else if (region.equals("27") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("28") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("29") == true) {
-        timezone = "Asia/Novokuznetsk";
-      } else if (region.equals("30") == true) {
-        timezone = "Asia/Vladivostok";
-      } else if (region.equals("31") == true) {
-        timezone = "Asia/Krasnoyarsk";
-      } else if (region.equals("32") == true) {
-        timezone = "Asia/Omsk";
-      } else if (region.equals("33") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("34") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("35") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("36") == true) {
-        timezone = "Asia/Anadyr";
-      } else if (region.equals("37") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("38") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("39") == true) {
-        timezone = "Asia/Krasnoyarsk";
-      } else if (region.equals("40") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("41") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("42") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("43") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("44") == true) {
-        timezone = "Asia/Magadan";
-      } else if (region.equals("45") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("46") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("47") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("48") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("49") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("50") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("51") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("52") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("53") == true) {
-        timezone = "Asia/Novosibirsk";
-      } else if (region.equals("54") == true) {
-        timezone = "Asia/Omsk";
-      } else if (region.equals("55") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("56") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("57") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("58") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("59") == true) {
-        timezone = "Asia/Vladivostok";
-      } else if (region.equals("60") == true) {
-        timezone = "Europe/Kaliningrad";
-      } else if (region.equals("61") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("62") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("63") == true) {
-        timezone = "Asia/Yakutsk";
-      } else if (region.equals("64") == true) {
-        timezone = "Asia/Sakhalin";
-      } else if (region.equals("65") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("66") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("67") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("68") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("69") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("70") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("71") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("72") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("73") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("74") == true) {
-        timezone = "Asia/Krasnoyarsk";
-      } else if (region.equals("75") == true) {
-        timezone = "Asia/Novosibirsk";
-      } else if (region.equals("76") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("77") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("78") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("79") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("80") == true) {
-        timezone = "Asia/Yekaterinburg";
-      } else if (region.equals("81") == true) {
-        timezone = "Europe/Samara";
-      } else if (region.equals("82") == true) {
-        timezone = "Asia/Irkutsk";
-      } else if (region.equals("83") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("84") == true) {
-        timezone = "Europe/Volgograd";
-      } else if (region.equals("85") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("86") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("87") == true) {
-        timezone = "Asia/Novosibirsk";
-      } else if (region.equals("88") == true) {
-        timezone = "Europe/Moscow";
-      } else if (region.equals("89") == true) {
-        timezone = "Asia/Vladivostok";
-      }
-    } else if (country.equals("UA") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("02") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("03") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("04") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("05") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("06") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("07") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("08") == true) {
-        timezone = "Europe/Simferopol";
-      } else if (region.equals("09") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("10") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("11") == true) {
-        timezone = "Europe/Simferopol";
-      } else if (region.equals("13") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("14") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("15") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("16") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("17") == true) {
-        timezone = "Europe/Simferopol";
-      } else if (region.equals("18") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("19") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("20") == true) {
-        timezone = "Europe/Simferopol";
-      } else if (region.equals("21") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("22") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("23") == true) {
-        timezone = "Europe/Kiev";
-      } else if (region.equals("24") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("25") == true) {
-        timezone = "Europe/Uzhgorod";
-      } else if (region.equals("26") == true) {
-        timezone = "Europe/Zaporozhye";
-      } else if (region.equals("27") == true) {
-        timezone = "Europe/Kiev";
-      }
-    } else if (country.equals("UZ") == true) {
-      if (region.equals("01") == true) {
-        timezone = "Asia/Tashkent";
-      } else if (region.equals("02") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("03") == true) {
-        timezone = "Asia/Tashkent";
-      } else if (region.equals("06") == true) {
-        timezone = "Asia/Tashkent";
-      } else if (region.equals("07") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("08") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("09") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("10") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("12") == true) {
-        timezone = "Asia/Samarkand";
-      } else if (region.equals("13") == true) {
-        timezone = "Asia/Tashkent";
-      } else if (region.equals("14") == true) {
-        timezone = "Asia/Tashkent";
-      }
-    } else if (country.equals("TL") == true) {
-      timezone = "Asia/Dili";
-    } else if (country.equals("PF") == true) {
-      timezone = "Pacific/Marquesas";
-    }
-    return timezone;
-  }
 }
