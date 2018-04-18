@@ -5,7 +5,7 @@ authors:
 - whoami
 - Fishrock123
 - Sindastra
-dev-url: https://github.com/sindastra/Bukkit-GeoIPTools
+dev-url: https://github.com/sindastra
 commands:
     geoupdate:
         description: Update the GeoIPDatabase files
