@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.sindastra.BukkitGeoIPTools</groupId>
 	<artifactId>GeoIPTools</artifactId>
-	<version>DEV</version>
+	<version>0.4.X-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -60,4 +60,14 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<url>https://github.com/sindastra</url>
+	<name>Sindastra's Legacy GeoIPTools</name>
+	<organization>
+		<name>Sindastra</name>
+		<url>https://github.com/sindastra</url>
+	</organization>
+	<issueManagement>
+		<url>https://github.com/sindastra</url>
+		<system>GitHub</system>
+	</issueManagement>
 </project>
