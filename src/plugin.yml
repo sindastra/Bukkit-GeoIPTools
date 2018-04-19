@@ -1,5 +1,5 @@
 name: GeoIPTools
-main: io.github.sindastra.BukkitGeoIPTools.GeoIPTools
+main: uk.org.whoami.geoip.GeoIPTools
 version: 'DEV'
 authors:
 - whoami

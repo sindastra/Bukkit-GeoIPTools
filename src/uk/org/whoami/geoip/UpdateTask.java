@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-package io.github.sindastra.BukkitGeoIPTools;
+package uk.org.whoami.geoip;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitScheduler;
-
-import io.github.sindastra.BukkitGeoIPTools.util.Updater;
+import uk.org.whoami.geoip.util.Updater;
 
 /**
  * @author Sebastian Köhler <whoami@whoami.org.uk>

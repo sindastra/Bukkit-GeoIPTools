@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.sindastra.BukkitGeoIPTools.util;
+package uk.org.whoami.geoip.util;
 
 import java.util.logging.Logger;
 

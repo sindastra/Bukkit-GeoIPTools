@@ -14,5 +14,5 @@ SOFTWARE.
 Code in src/com.maxmind.geoip:
 https://www.gnu.org/licenses/lgpl.txt
 
-Code in src/io.github.sindastra.BukkitGeoIPTools* (formerly src/uk.org.whoami.geoip*):
+Code in src/uk.org.whoami.geoip*:
 https://www.apache.org/licenses/LICENSE-2.0.txt

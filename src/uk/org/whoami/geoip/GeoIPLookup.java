@@ -13,15 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.sindastra.BukkitGeoIPTools;
+package uk.org.whoami.geoip;
 
+import uk.org.whoami.geoip.util.ConsoleLogger;
+import uk.org.whoami.geoip.util.Settings;
 import com.maxmind.geoip.Country;
 import com.maxmind.geoip.Location;
 import com.maxmind.geoip.LookupService;
-
-import io.github.sindastra.BukkitGeoIPTools.util.ConsoleLogger;
-import io.github.sindastra.BukkitGeoIPTools.util.Settings;
-
 import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.Inet6Address;
