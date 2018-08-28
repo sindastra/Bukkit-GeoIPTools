@@ -9,7 +9,7 @@
 - Permissions support.
 - No more tracking or statistics uploading!
 
-#### MaxMind Info
+### MaxMind Info
 MaxMind reserves the right to limit the number of downloads made within a limited period of time.
 
 The MaxMind GeoLite Legacy databases are being discontinued by January 2, 2019. 
