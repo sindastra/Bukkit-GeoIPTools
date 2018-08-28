@@ -9,11 +9,12 @@
 - Permissions support.
 - No more tracking or statistics uploading!
 
+#### MaxMind Info
 MaxMind reserves the right to limit the number of downloads made within a limited period of time.
 
 The MaxMind GeoLite Legacy databases are being discontinued by January 2, 2019. 
 More information can be found here: https://support.maxmind.com/geolite-legacy-discontinuation-notice/
 
-This project is not affiliated with MaxMind in any way; I simply use the MaxMind library.
-
 This project needs to be updated before 2nd of January 2019 to continue working.
+
+This project is not affiliated with MaxMind in any way; I simply use the MaxMind library.
