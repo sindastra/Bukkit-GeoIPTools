@@ -87,7 +87,7 @@ public class Settings {
     }
     public String getIPv6DatabaseURL() {
         String key = "URL.IPv6Database";
-        if (conf.getString(key) == null) {
+        if (conf.getString(key) == null || conf.getString(key) == "http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz") {
             conf.set(key, "https://web.archive.org/web/20181211074431if_/http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz");
         }
         return conf.getString(key);
@@ -95,7 +95,7 @@ public class Settings {
 
     public String getCityDatabaseURL() {
         String key = "URL.CityDatabase";
-        if (conf.getString(key) == null) {
+        if (conf.getString(key) == null || conf.getString(key) == "http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz") {
             conf.set(key, "https://web.archive.org/web/20190102095809if_/http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz");
         }
         return conf.getString(key);
@@ -103,7 +103,7 @@ public class Settings {
 
     public String getCountryDatabaseURL() {
         String key = "URL.CountryDatabase";
-        if (conf.getString(key) == null) {
+        if (conf.getString(key) == null || conf.getString(key) == "http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz") {
             conf.set(key, "https://web.archive.org/web/20181229152721if_/http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz");
         }
         return conf.getString(key);
