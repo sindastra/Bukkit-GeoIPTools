@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.sindastra.BukkitGeoIPTools</groupId>
 	<artifactId>GeoIPTools</artifactId>
-	<version>0.4.X-SNAPSHOT</version>
+	<version>0.5.X-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.12.2-R0.1-SNAPSHOT</version><!--change this value depending 
+			<version>1.13.2-R0.1-SNAPSHOT</version><!--change this value depending 
 				on the version or use LATEST -->
 			<type>jar</type>
 			<scope>provided</scope>
@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.12.2-R0.1-SNAPSHOT</version><!--change this value depending 
+			<version>1.13.2-R0.1-SNAPSHOT</version><!--change this value depending 
 				on the version -->
 			<type>jar</type>
 			<scope>provided</scope>
