@@ -1,5 +1,6 @@
 /*
  * Copyright 2011 Sebastian Köhler <sebkoehler@whoami.org.uk>.
+ * Copyright (c) 2019 Sindastra <https://github.com/sindastra>, All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,10 +51,10 @@ public class Settings {
     
     public boolean isUpdaterDisabled() {
         String key = "Update:disabled";
-        if (conf.getString(key) == null) {
-            conf.set(key, false);
+        if (conf.getString(key) != "true") {
+            conf.set(key, true);
         }
-        return conf.getBoolean(key, false);
+        return conf.getBoolean(key, true);
     }
 
     public void setLastUpdated(long lastUpdated) {
