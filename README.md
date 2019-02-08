@@ -17,4 +17,6 @@ More information can be found here: https://support.maxmind.com/geolite-legacy-d
 
 ~~This project needs to be updated before 2nd of January 2019 to continue working.~~
 
+Databases are now downloaded from archive.org!
+
 **This project is not affiliated with MaxMind in any way; I simply use the MaxMind library.**
