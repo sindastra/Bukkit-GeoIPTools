@@ -1,3 +1,5 @@
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W215OZB)
+
 # Sindastra's Legacy GeoIPTools
 ### Geo-IP library for Bukkit and Spigot.
 - Supports the GeoIPCountry, GeoIPCity and GeoIPv6 databases by MaxMind <http://www.maxmind.com>.
